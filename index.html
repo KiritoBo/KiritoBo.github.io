@@ -64,6 +64,77 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-JavaScript练习题（二）" class="title-JavaScript练习题（二） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/08/JavaScript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%BA%8C%EF%BC%89/">JavaScript练习题（二）</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2020/04/08/JavaScript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%BA%8C%EF%BC%89/" data-id="ck8spr2uv0000p4q4ebs0ccqj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h4 id="一、不同数据类型之间的转换"><a href="#一、不同数据类型之间的转换" class="headerlink" title="一、不同数据类型之间的转换"></a>一、不同数据类型之间的转换</h4><ul>
+<li>转换成字符串toString(),String(),eval(),其中String()可用于转换null和undefined,计算字符串表达式的值并以数值形式返回；<br>快速转换字符串的方式：在数据后面加上+””</li>
+<li>转换成数字Number(),parseInt(),parseFloat,+”77”(隐式)，”22”-0（隐式）</li>
+<li>转换成布尔值boolean()，!，!!，</li>
+<li>小结：转换后为false的值有false 本身、空字符串、0、NaN、null、undefined。<h4 id="二、null和undefined区别和联系"><a href="#二、null和undefined区别和联系" class="headerlink" title="二、null和undefined区别和联系"></a>二、null和undefined区别和联系</h4></li>
+<li>null和undefined都是表示没有的，不存在的值；他们两个在进行逻辑转换时候都是false；这两个值进行比较是true；</li>
+<li>null表示空引用，它是object类型，undefined表示未定义，它是undefined类型；</li>
+<li>null是object类型，但不是object的实例；用instanceof为false；</li>
+<li>一个变量未定义，或者变量定义里未赋值；则是undefined；<h4 id="三、在js中，-、-、-分别代表什么意思？"><a href="#三、在js中，-、-、-分别代表什么意思？" class="headerlink" title="三、在js中，{}、[]、/^$/分别代表什么意思？"></a>三、在js中，{}、[]、/^$/分别代表什么意思？</h4>{}是对象，[]是数组，/^$/是正则 <h4 id="四、NaN是什么意思？这个值有什么特点？"><a href="#四、NaN是什么意思？这个值有什么特点？" class="headerlink" title="四、NaN是什么意思？这个值有什么特点？"></a>四、NaN是什么意思？这个值有什么特点？</h4></li>
+<li>Not a Number 不是数值但是NaN属于数值类型</li>
+<li>任何涉及NaN的操作都将返回NaN</li>
+<li>NaN与任何数值都不相等包括其自身<h4 id="五、请问alert-Number-“08”-；输出的结果是什么？"><a href="#五、请问alert-Number-“08”-；输出的结果是什么？" class="headerlink" title="五、请问alert(Number(“08”))；输出的结果是什么？"></a>五、请问alert(Number(“08”))；输出的结果是什么？</h4>结果是8 先将”08”转换成8然后输出为数字8<h4 id="六、如何让alert弹出框的信息换行？"><a href="#六、如何让alert弹出框的信息换行？" class="headerlink" title="六、如何让alert弹出框的信息换行？"></a>六、如何让alert弹出框的信息换行？</h4>使用\n<h4 id="七、var-str-true-11-null-9-undefined-”zhuanbang”-false-null-9-str的值是多少？为什么？"><a href="#七、var-str-true-11-null-9-undefined-”zhuanbang”-false-null-9-str的值是多少？为什么？" class="headerlink" title="七、var str=true+11+null+9+undefined+”zhuanbang”+false+null+9+[],str的值是多少？为什么？"></a>七、var str=true+11+null+9+undefined+”zhuanbang”+false+null+9+[],str的值是多少？为什么？</h4>NaNzhuanbangfalsenull9 <h4 id="八、请写出下面式子的结果"><a href="#八、请写出下面式子的结果" class="headerlink" title="八、请写出下面式子的结果"></a>八、请写出下面式子的结果</h4></li>
+<li>null instanceof Object   false<br>instanceof是检测检测某一个实例是否属于这个类，null是object类型，但不是object的实例；用instanceof为false；</li>
+<li>null===undefined   false<br>null表示空引用，它是object类型，undefined表示未定义，它是undefined类型；</li>
+<li>null==undefined   true<br>因为undefined派生自null，所以undefined和null做数据类型比较的时候的true；</li>
+<li>NaN==NaN  false<br>NaN和任何数值都不想等；</li>
+<li>false==0  true<br>==将false转换为数值0进行比较所以相等；</li>
+<li>false==-1  flase<br>false转换成数字类型为0 不等于-1；</li>
+<li>“”==0   true<br>空串转换成数字类型为0；</li>
+<li>[]==0   true<br>空数组转换成数字类型为0；</li>
+<li>[] == []  false<br>因为数组是对象类型，他们的地址不同，所以是false；</li>
+<li>!![]   true<br>!! 是将其他的数据类型取反再取反，结果是将数据转换为布尔类型，相当于 Boolean()；对象类型布尔值为true；</li>
+<li>false==null   false<br>null 和 undefined 和其他类型比较都是 false；（这两个方法没有 toString 方法）</li>
+<li>false==””   true<br>布尔值和字符串比较时都转换成数字在比较，false和空串转换数字类型都是0；</li>
+<li>false==” “  true<br>布尔值和字符串比较时都转换成数字在比较；</li>
+<li>0.1+0.2==0.3  false<br>浮点数之间的运算不准确，需要转成整数，然后再运算，运算后再转回对应的小数，实际上0.1+0.2=0.30000000000000004；</li>
+<li>“5”==5   true<br>字符串和数字比较时两边都转换为数字，两边相等；</li>
+<li>补充知识：==：运算符称作相等百，用来检测两个操作数是否相等，这里的相等定义的非常宽松，可以允许进行类型转换<br>===：用来检测两个操作数是否度严格相等</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/08/JavaScript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%BA%8C%EF%BC%89/">
+    <time datetime="2020-04-08T14:06:42.000Z" class="entry-date">
+        2020-04-08
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-javascript练习题（一）" class="post-javascript练习题（一） post type-post status-publish format-standard hentry">
     <!---->
 
@@ -217,6 +288,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget-content">
       <ul>
+        
+          <li>
+            <a href="/2020/04/08/JavaScript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%BA%8C%EF%BC%89/">JavaScript练习题（二）</a>
+          </li>
         
           <li>
             <a href="/2020/04/07/javascript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/">javascript初识练习题（一）</a>
