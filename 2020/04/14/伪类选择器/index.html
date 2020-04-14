@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   
   
-  <meta name="description" content="总结了四种层次选择器，分别是”+”  “&amp;gt;”  “~”  “ “ 下面举例子说明一下：
+  <meta name="description" content=":link       访问前的样式（只能给a添加）:visited    访问后的样式（只能给a添加）:hover      鼠标滑入的样式:active     鼠标点击的样式
 
-h1+h2  相邻选择器选择与h1紧挨着的下一个元素，二者具有相同的父元素，若后面有两个h2则只会选择最近的一个。
-div&amp;gt;h2  父子选择器选择父元素是div元素的所有h2元素，选取的是div的直" />
+最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。
+
+:after " />
   
 
   
@@ -16,17 +17,17 @@ div&amp;gt;h2  父子选择器选择父元素是div元素的所有h2元素，选
   
   
   
-  <title>css的层次选择器 | KiritoBo</title>
+  <title>伪类选择器 | KiritoBo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="总结了四种层次选择器，分别是”+”  “&gt;”  “~”  “ “ 下面举例子说明一下：  h1+h2  相邻选择器选择与h1紧挨着的下一个元素，二者具有相同的父元素，若后面有两个h2则只会选择最近的一个。 div&gt;h2  父子选择器选择父元素是div元素的所有h2元素，选取的是div的直接后代元素。 h1~h2  兄弟选择器选择h1后面所有的h2元素，二者具有相同的父元素，若不是同一个">
+  <meta name="description" content=":link       访问前的样式（只能给a添加）:visited    访问后的样式（只能给a添加）:hover      鼠标滑入的样式:active     鼠标点击的样式  最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。  :after :before    通过伪类方式给元素添加一段文本内容，使用content属性:checked :">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css的层次选择器">
-<meta property="og:url" content="http://yoursite.com/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
+<meta property="og:title" content="伪类选择器">
+<meta property="og:url" content="http://yoursite.com/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
 <meta property="og:site_name" content="KiritoBo">
-<meta property="og:description" content="总结了四种层次选择器，分别是”+”  “&gt;”  “~”  “ “ 下面举例子说明一下：  h1+h2  相邻选择器选择与h1紧挨着的下一个元素，二者具有相同的父元素，若后面有两个h2则只会选择最近的一个。 div&gt;h2  父子选择器选择父元素是div元素的所有h2元素，选取的是div的直接后代元素。 h1~h2  兄弟选择器选择h1后面所有的h2元素，二者具有相同的父元素，若不是同一个">
+<meta property="og:description" content=":link       访问前的样式（只能给a添加）:visited    访问后的样式（只能给a添加）:hover      鼠标滑入的样式:active     鼠标点击的样式  最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。  :after :before    通过伪类方式给元素添加一段文本内容，使用content属性:checked :">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-10T12:03:15.000Z">
-<meta property="article:modified_time" content="2020-04-10T12:21:14.843Z">
+<meta property="article:published_time" content="2020-04-14T14:15:20.000Z">
+<meta property="article:modified_time" content="2020-04-14T14:34:47.813Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -71,7 +72,7 @@ div&amp;gt;h2  父子选择器选择父元素是div元素的所有h2元素，选
 </header>
 
       <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-css的层次选择器" class="title-css的层次选择器 post type-post status-publish format-standard hentry">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-伪类选择器" class="title-伪类选择器 post type-post status-publish format-standard hentry">
     <!---->
 
       <header class="entry-header">
@@ -79,34 +80,36 @@ div&amp;gt;h2  父子选择器选择父元素是div元素的所有h2元素，选
         
   
     <h1 class="entry-title article-title">
-      css的层次选择器
+      伪类选择器
     </h1>
   
 
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck8u5t6gr0000koq4guomgusj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck900c6tq0000ykq4hz953xfz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p>总结了四种层次选择器，分别是”+”  “&gt;”  “~”  “ “ 下面举例子说明一下：</p>
-<ul>
-<li>h1+h2  相邻选择器<br>选择与h1紧挨着的下一个元素，二者具有相同的父元素，若后面有两个h2则只会选择最近的一个。</li>
-<li>div&gt;h2  父子选择器<br>选择父元素是div元素的所有h2元素，选取的是div的直接后代元素。</li>
-<li>h1~h2  兄弟选择器<br>选择h1后面所有的h2元素，二者具有相同的父元素，若不是同一个父元素不会选择。</li>
-<li>div p  选取div中的所有p元素。</li>
-</ul>
+        <p>:link       访问前的样式（只能给a添加）<br>:visited    访问后的样式（只能给a添加）<br>:hover      鼠标滑入的样式<br>:active     鼠标点击的样式</p>
+<hr>
+<p>最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。</p>
+<hr>
+<p>:after :before    通过伪类方式给元素添加一段文本内容，使用content属性<br>:checked :disabled :focus     针对表单元素</p>
+<hr>
+<p>结构性伪类选择器<br>  :nth-of-type()  :nth-child()<br>  括号里从1开始，直接写n表示从0到无穷也就是全选。<br>  first-of-type() 选择第一项<br>  last-of-type()  选择最后一项<br>  only-of-type()  只有一项时使用</p>
+<hr>
+<p>  nth-of-type()和nth-child()的区别<br>  nth-of-type(n)是选择同一个父元素中相同子元素的第n个<br>  nth-child(n)是选择同一个父元素中所有子元素中的第n个<br>  eg:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure><br>  ul:nth-of-type(2)选择的是第二个li<br>  ul:nth-child(2)选择的是div<br>  注：这里若使用only-of-type选择div是可以的，因为只有一个div标签。</p>
 
       
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-    <a href="/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/">
-    <time datetime="2020-04-10T12:03:15.000Z" class="entry-date">
-        2020-04-10
+    <a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">
+    <time datetime="2020-04-14T14:15:20.000Z" class="entry-date">
+        2020-04-14
     </time>
 </a>
     
@@ -119,10 +122,8 @@ div&amp;gt;h2  父子选择器选择父元素是div元素的所有h2元素，选
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
-        <span class="nav-previous"><a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" rel="prev"><span class="meta-nav">←</span> 伪类选择器</a></span>
     
-    
-        <span class="nav-next"><a href="/2020/04/09/sao%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2/" rel="next">sao登录界面 <span class="meta-nav">→</span></a></span>
+        <span class="nav-next"><a href="/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/" rel="next">css的层次选择器 <span class="meta-nav">→</span></a></span>
     
 </nav><!-- .nav-single -->
 
