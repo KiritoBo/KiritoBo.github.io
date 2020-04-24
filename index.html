@@ -69,6 +69,61 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记五" class="title-HTTP笔记五 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/" data-id="ck9e3ypcf0000jkq491wnc0rc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="与-HTTP-协作的-Web-服-务器"><a href="#与-HTTP-协作的-Web-服-务器" class="headerlink" title="与 HTTP 协作的 Web 服 务器"></a>与 HTTP 协作的 Web 服 务器</h3><h4 id="用单台虚拟主机实现多个域名"><a href="#用单台虚拟主机实现多个域名" class="headerlink" title="用单台虚拟主机实现多个域名"></a>用单台虚拟主机实现多个域名</h4><p>一台服务器可以利用虚拟主机实现多台服务器的效果。<br>在互联网上，域名通过 DNS 服务映射到 IP 地址（域名解析）之后访问目标网站，如果一个服务器托管了两个域名就需要判断访问哪个域名，且域名的IP地址是一样的。因此在发送 HTTP 请求时，必须在 Host 首部内完整指定主机名或域名的 URI。</p>
+<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><ul>
+<li>代理服务器的基本行为就是接收客户端发送的请求后转发给其他服务器，不改变请求URI发给源服务器，源服务器响应经过代理服务器传给客户端。</li>
+<li>HTTP通信过程中可以级联多台代理服务器，每经过一次代理服务器，会追加写入 Via 首部信息。</li>
+<li>使用代理服务器的理由有：利用缓存技术减少网络带宽的流量，组织内部针对特定网站的访问控制，以获取访问日志为主要目的，等等。</li>
+<li>缓存代理：代理转发响应时，缓存代理（Caching Proxy）会预先将资源的副本（缓存）保存在代理服务器上。<br>当代理再次接收到对相同资源的请求时，就可以不从源服务器那里获取资源，而是将之前缓存的资源作为响应返回。</li>
+<li>透明代理：转发请求或响应时，不对报文做任何加工的代理类型被称为透明代理（Transparent Proxy）。</li>
+</ul>
+<hr>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">
+    <time datetime="2020-04-24T10:58:40.000Z" class="entry-date">
+        2020-04-24
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记四" class="title-HTTP笔记四 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -559,80 +614,6 @@
 
 
   
-    <article id="post-javascript练习题（一）" class="post-javascript练习题（一） post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/07/javascript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/">javascript初识练习题（一）</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/07/javascript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/" data-id="ck98m5yid0004ykq4hczl4k2y" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h4 id="一、如何区分HTML和HTML5"><a href="#一、如何区分HTML和HTML5" class="headerlink" title="一、如何区分HTML和HTML5?"></a>一、如何区分HTML和HTML5?</h4><ul>
-<li>HTML4是用 &lt;! DOCTYPE html PUBLIC “-//W3C//DTD XHTML 4.0 Transitional//EN” “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;" target="_blank" rel="noopener">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;</a> 这种的声明。</li>
-<li>HTML5是用&lt;!DOCTYPE&gt;声明。</li>
-<li>HTML5<code>&lt;canvas&gt;</code>标签代替flash。</li>
-<li>HTML5新增<code>&lt;header&gt;&lt;footer&gt;&lt;section&gt;&lt;article&gt;&lt;menu&gt;&lt;figure&gt;&lt;audio&gt;&lt;video&gt;</code>等标签。</li>
-<li>HTML5删除了<code>&lt;b&gt;&lt;font&gt;&lt;frame&gt;&lt;center&gt;&lt;big&gt;</code>标签。</li>
-<li>HTML5对<code>&lt;form&gt;</code>和 <code>&lt;forminput&gt;</code> 标签进行了大量修改，添加了很多新的属性，也修改了很多属性。<br><strong>个人小结</strong>：首先就是看文件开头的声明区别，然后寻找新增的语义化标签。</li>
-</ul>
-<hr>
-<h4 id="二、为什么HTML和HTML5的声明方式不同-背后的原理是什么？"><a href="#二、为什么HTML和HTML5的声明方式不同-背后的原理是什么？" class="headerlink" title="二、为什么HTML和HTML5的声明方式不同/背后的原理是什么？"></a>二、为什么HTML和HTML5的声明方式不同/背后的原理是什么？</h4><ul>
-<li>HTML4中，&lt;!DOCTYPE&gt;声明引用DTD（文档类型声明），因为HTML4基于SGLM（标准通用标记语言）。</li>
-<li>HTML5不是SGLM子集，不需引用DTD。<br><strong>个人小结</strong>：本质上都是为了保证浏览器正确渲染内容，HTML5的doctype 比以前更短，更简单，使的它更容易被记住并且减少必须下载的字节数。</li>
-</ul>
-<hr>
-<h4 id="三、JS这门语言由哪些部分组成，不同的部分都有什么作用？"><a href="#三、JS这门语言由哪些部分组成，不同的部分都有什么作用？" class="headerlink" title="三、JS这门语言由哪些部分组成，不同的部分都有什么作用？"></a>三、JS这门语言由哪些部分组成，不同的部分都有什么作用？</h4><p>由EMCAscript、DOM、BOM组成，其中：</p>
-<ul>
-<li>EMCAscript：提供核心语言功能,是<strong>核心</strong>，规定了这们语言的书写规范；</li>
-<li>DOM：提供<strong>访问和操作网页内容</strong>的方法和接口,(document object model 简称DOM 文档对象模型)；</li>
-<li>BOM: 提供<strong>与浏览器交互</strong>的方法和接口,从根本上讲BOM只处理浏览器窗口和框架,(browser object model 简称 BOM 浏览器对象模型)。</li>
-</ul>
-<hr>
-<h4 id="四、如何判断JS的数据类型？"><a href="#四、如何判断JS的数据类型？" class="headerlink" title="四、如何判断JS的数据类型？"></a>四、如何判断JS的数据类型？</h4><p>最简单的检测数据类型的方式是通过typeof的方式来检测  </p>
-<hr>
-<h4 id="五、Javascript有几种数据类型？"><a href="#五、Javascript有几种数据类型？" class="headerlink" title="五、Javascript有几种数据类型？"></a>五、Javascript有几种数据类型？</h4><ul>
-<li>基本数据类型：String、number、boolean、null、undefined。</li>
-<li>引用数据类型：Object。</li>
-</ul>
-<hr>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/07/javascript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/07/javascript%E7%BB%83%E4%B9%A0%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/">
-    <time datetime="2020-04-07T14:20:25.000Z" class="entry-date">
-        2020-04-07
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -662,6 +643,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
           </li>
         
@@ -675,10 +660,6 @@
         
           <li>
             <a href="/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/">HTTP笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/">sao LOGIN 界面</a>
           </li>
         
       </ul>

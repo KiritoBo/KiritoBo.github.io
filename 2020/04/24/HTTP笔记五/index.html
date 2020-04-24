@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>HTTP笔记五 | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="与 HTTP 协作的 Web 服 务器用单台虚拟主机实现多个域名一台服务器可以利用虚拟主机实现多台服务器的效果。在互联网上，域名通过 DNS 服务映射到 IP 地址（域名解析）之后访问目标网站，如果一个服务器托管了两个域名就需要判断访问哪个域名，且域名的IP地址是一样的。因此在发送 HTTP 请求时，必须在 Host 首部内完整指定主机名或域名的 URI。 代理 代理服务器的基本行为就是接收客户端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP笔记五">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="与 HTTP 协作的 Web 服 务器用单台虚拟主机实现多个域名一台服务器可以利用虚拟主机实现多台服务器的效果。在互联网上，域名通过 DNS 服务映射到 IP 地址（域名解析）之后访问目标网站，如果一个服务器托管了两个域名就需要判断访问哪个域名，且域名的IP地址是一样的。因此在发送 HTTP 请求时，必须在 Host 首部内完整指定主机名或域名的 URI。 代理 代理服务器的基本行为就是接收客户端">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-24T10:58:40.000Z">
+<meta property="article:modified_time" content="2020-04-24T11:24:56.421Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-HTTP笔记五" class="title-HTTP笔记五 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      HTTP笔记五
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/" data-id="ck9e3ypcf0000jkq491wnc0rc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="与-HTTP-协作的-Web-服-务器"><a href="#与-HTTP-协作的-Web-服-务器" class="headerlink" title="与 HTTP 协作的 Web 服 务器"></a>与 HTTP 协作的 Web 服 务器</h3><h4 id="用单台虚拟主机实现多个域名"><a href="#用单台虚拟主机实现多个域名" class="headerlink" title="用单台虚拟主机实现多个域名"></a>用单台虚拟主机实现多个域名</h4><p>一台服务器可以利用虚拟主机实现多台服务器的效果。<br>在互联网上，域名通过 DNS 服务映射到 IP 地址（域名解析）之后访问目标网站，如果一个服务器托管了两个域名就需要判断访问哪个域名，且域名的IP地址是一样的。因此在发送 HTTP 请求时，必须在 Host 首部内完整指定主机名或域名的 URI。</p>
+<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><ul>
+<li>代理服务器的基本行为就是接收客户端发送的请求后转发给其他服务器，不改变请求URI发给源服务器，源服务器响应经过代理服务器传给客户端。</li>
+<li>HTTP通信过程中可以级联多台代理服务器，每经过一次代理服务器，会追加写入 Via 首部信息。</li>
+<li>使用代理服务器的理由有：利用缓存技术减少网络带宽的流量，组织内部针对特定网站的访问控制，以获取访问日志为主要目的，等等。</li>
+<li>缓存代理：代理转发响应时，缓存代理（Caching Proxy）会预先将资源的副本（缓存）保存在代理服务器上。<br>当代理再次接收到对相同资源的请求时，就可以不从源服务器那里获取资源，而是将之前缓存的资源作为响应返回。</li>
+<li>透明代理：转发请求或响应时，不对报文做任何加工的代理类型被称为透明代理（Transparent Proxy）。</li>
+</ul>
+<hr>
+<a id="more"></a>
+<h4 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h4><p>网关的工作机制和代理十分相似，而网关能使通信线路上的服务器提供非 HTTP 协议服务。可以在客户端与网关之间的线路上加密提高通信安全性。</p>
+<h4 id="隧道"><a href="#隧道" class="headerlink" title="隧道"></a>隧道</h4><p>隧道可按要求建立起一条与其他服务器的通信线路，届时使用 SSL 等加密手段进行通信。隧道的目的是确保客户端能与服务器进行安全的通信。</p>
+<h4 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h4><p>缓存是指代理服务器或客户端本地磁盘内保存的资源副本。利用缓存可减少对源服务器的访问，因此也就节省了通信流量和通信时间。（缓存服务器是代理服务器的一种）<br>缓存有有效期限，当缓存服务器判断缓存失效时就会再次从源服务器获取新资源。<br>缓存不仅可以存在于缓存服务器内，还可以存在客户端浏览器中。</p>
+<h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><ul>
+<li>FTP：传输文件时使用的协议，仍广泛沿用。</li>
+<li>NNTP：用于 NetNews 电子会议室内传送消息的协议，已不怎么使用。</li>
+<li>Archie：搜索 anonymous FTP 公开的文件信息的协议，已不怎么使用。</li>
+<li>WAIS: 以关键词检索多个数据库使用的协议，已不怎么使用。</li>
+<li>Gopher：查找与互联网连接的计算机内信息的协议，已不怎么使用。</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">
+    <time datetime="2020-04-24T10:58:40.000Z" class="entry-date">
+        2020-04-24
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/" rel="next">HTTP笔记四 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/22/HTTP%E7%AC%94%E8%AE%B0%E4%B8%89/">HTTP笔记三</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/">HTTP笔记第二章</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/">HTTP笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
