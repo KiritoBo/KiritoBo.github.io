@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>HTTP笔记六（2） | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="HTTP&#x2F;1.1通用首部字段 Cache-Control作用：能够控制缓存的行为，可多指令，用逗号隔开。缓存请求指令：    缓存响应指令：  拓展：cache-extension token通过 cache-extension 标记（token），可以扩展 Cache-Control 首部字段内的指令。2. Connection作用：控制不再转发给代理的首部字段（通过后接相应的字段名，代理服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP笔记六（2）">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="HTTP&#x2F;1.1通用首部字段 Cache-Control作用：能够控制缓存的行为，可多指令，用逗号隔开。缓存请求指令：    缓存响应指令：  拓展：cache-extension token通过 cache-extension 标记（token），可以扩展 Cache-Control 首部字段内的指令。2. Connection作用：控制不再转发给代理的首部字段（通过后接相应的字段名，代理服务器">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg1.jpg">
+<meta property="og:image" content="https://github.com/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg2.jpg">
+<meta property="og:image" content="https://github.com/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg3.jpg">
+<meta property="article:published_time" content="2020-04-27T11:18:39.000Z">
+<meta property="article:modified_time" content="2020-04-27T11:47:59.690Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg1.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-HTTP笔记六（2）" class="title-HTTP笔记六（2） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      HTTP笔记六（2）
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/" data-id="ck9if1z8w00000cq47pk14dxw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="HTTP-1-1通用首部字段"><a href="#HTTP-1-1通用首部字段" class="headerlink" title="HTTP/1.1通用首部字段"></a>HTTP/1.1通用首部字段</h3><ol>
+<li>Cache-Control<br>作用：能够控制缓存的行为，可多指令，用逗号隔开。<br>缓存请求指令：</li>
+</ol>
+<img src="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg1.jpg" class>
+
+<p>缓存响应指令：</p>
+<img src="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg2.jpg" class>
+<p>拓展：cache-extension token<br>通过 cache-extension 标记（token），可以扩展 Cache-Control 首部字段内的指令。<br>2. Connection<br>作用：控制不再转发给代理的首部字段（通过后接相应的字段名，代理服务器会删除他之后再转发）；<br>    管理持久连接（Close断开连接，Keep-Alive持续连接）。<br>3. Date<br>作用：表明创建 HTTP 报文的日期和时间。<br>4. Pragma<br>作用： HTTP/1.1 之前版本的历史遗留字段，仅作为与 HTTP/1.0 的向后兼容而定义。<br>通常包含以下两个首部字段，用在客户端发送的请求中，要求中间服务器不返回缓存的资源。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: no-cache </span><br><span class="line">Pragma: no-cache</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ol start="5">
+<li>Trailer<br>作用：事先说明在报文主体后记录了哪些首部字段。该首部字段可应用在 HTTP/1.1 版本分块传输编码时。</li>
+<li>Transfer-Encoding<br>作用：规定了传输报文主体时采用的编码方式。 （HTTP/1.1 的传输编码方式仅对分块传输编码有效。）</li>
+<li>Upgrade<br>作用：检测 HTTP 协议及其他协议是否可使用更高的版本进行通信，其参数值可以用来指定一个完全不同的通信协议。（服务器用101 Switching Protocols状态码作为响应返回）</li>
+<li>Via<br>作用：追踪客户端与服务器之间的请求和响应报文的传输路径。（经常会和TRACE方法一起使用）</li>
+<li>Warning<br>作用：告知用户一些与缓存相关的问题的警告。<br>Warning: [警告码][警告的主机:端口号]“[警告内容]”([日期时间])<br>日期可省略，HTTP/1.1中定义了7种警告如下：<img src="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/eg3.jpg" class>
+
+</li>
+</ol>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">
+    <time datetime="2020-04-27T11:18:39.000Z" class="entry-date">
+        2020-04-27
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/04/26/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%881%EF%BC%89/" rel="next">HTTP笔记六（1） <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">HTTP笔记六（2）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/26/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%881%EF%BC%89/">HTTP笔记六（1）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/22/HTTP%E7%AC%94%E8%AE%B0%E4%B8%89/">HTTP笔记三</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
