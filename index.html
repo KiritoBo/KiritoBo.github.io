@@ -69,6 +69,61 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记六（3）" class="title-HTTP笔记六（3） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/" data-id="ck9juxpye00009sq4ap4ld36b" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="请求首部字段"><a href="#请求首部字段" class="headerlink" title="请求首部字段"></a>请求首部字段</h3><ol>
+<li>Accept<br>作用：通知服务器，用户代理能够处理的媒体类型及媒体类型的相对优先级，使用type/subtype指定。<br>若想要给显示的媒体类型增加优先级，则使用 q= 来额外表示权重值 ，用分号进行分隔。权重值 q 的范围是 0~1（可精确到小数点后3位），且1为最大值。不指定权重 q 值时，默认权重为 q=1.0。</li>
+<li>Accept-Charset<br>作用：通知服务器用户代理支持的字符集及字符集的相对优先顺序，同样用 q 表示权重。</li>
+<li>Accept-Encoding<br>作用：告知服务器用户代理支持的内容编码及内容编码的优先级顺序，同样用 q 表示权重。</li>
+<li>Accept-Language<br>作用：告知服务器用户代理能够处理的自然语言集（指中文或英文等），以及相对优先级，同样用 q 表示权重。</li>
+<li>Authorization<br>作用：告知服务器，用户代理的认证信息（证书值）。</li>
+<li>Expect<br>作用：告知服务器期望出现的某种特定行为，若无法做出回应发生错误，返回状态码 417 Expectation Failed。</li>
+<li>From<br>作用：告知服务器使用用户代理的用户的电子邮件地址。</li>
+<li>Host<br>作用：告知服务器请求的资源所处的互联网主机名和端口号，必须包含在请求内，用来区分同一个IP上的不同主机。</li></ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">
+    <time datetime="2020-04-28T11:09:07.000Z" class="entry-date">
+        2020-04-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记六（2）" class="title-HTTP笔记六（2） post type-post status-publish format-standard hentry">
     <!---->
 
@@ -609,55 +664,6 @@
 
 
   
-    <article id="title-css的层次选择器" class="title-css的层次选择器 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/">css的层次选择器</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck9h17oq400039sq48bf95tyv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>总结了四种层次选择器，分别是”+”  “&gt;”  “~”  “ “ 下面举例子说明一下：</p>
-<ul>
-<li>h1+h2  相邻选择器<br>选择与h1紧挨着的下一个元素，二者具有相同的父元素，若后面有两个h2则只会选择最近的一个。</li>
-<li>div&gt;h2  父子选择器<br>选择父元素是div元素的所有h2元素，选取的是div的直接后代元素。</li>
-<li>h1~h2  兄弟选择器<br>选择h1后面所有的h2元素，二者具有相同的父元素，若不是同一个父元素不会选择。</li>
-<li>div p  选取div中的所有p元素。</li>
-</ul>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/10/css%E7%9A%84%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8/">
-    <time datetime="2020-04-10T12:03:15.000Z" class="entry-date">
-        2020-04-10
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -687,6 +693,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">HTTP笔记六（2）</a>
           </li>
         
@@ -700,10 +710,6 @@
         
           <li>
             <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/22/HTTP%E7%AC%94%E8%AE%B0%E4%B8%89/">HTTP笔记三</a>
           </li>
         
       </ul>
