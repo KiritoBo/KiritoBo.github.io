@@ -69,6 +69,57 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-伪类选择器" class="title-伪类选择器 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">伪类选择器</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck9h17oqd000a9sq4gps88qfc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>:link       访问前的样式（只能给a添加）<br>:visited    访问后的样式（只能给a添加）<br>:hover      鼠标滑入的样式<br>:active     鼠标点击的样式</p>
+<hr>
+<p>最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。</p>
+<hr>
+<p>:after :before    通过伪类方式给元素添加一段文本内容，使用content属性<br>:checked :disabled :focus     针对表单元素</p>
+<hr>
+<p>结构性伪类选择器<br>  :nth-of-type()  :nth-child()<br>  括号里从1开始，直接写n表示从0到无穷也就是全选。<br>  first-of-type() 选择第一项<br>  last-of-type()  选择最后一项<br>  only-of-type()  只有一项时使用</p>
+<hr>
+<p>  nth-of-type()和nth-child()的区别<br>  nth-of-type(n)是选择同一个父元素中相同子元素的第n个<br>  nth-child(n)是选择同一个父元素中所有子元素中的第n个<br>  eg:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure><br>  ul:nth-of-type(2)选择的是第二个li<br>  ul:nth-child(2)选择的是div<br>  注：这里若使用only-of-type选择div是可以的，因为只有一个div标签。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">
+    <time datetime="2020-04-14T14:15:20.000Z" class="entry-date">
+        2020-04-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-css的层次选择器" class="title-css的层次选择器 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -376,6 +427,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
           </li>
         
@@ -389,10 +444,6 @@
         
           <li>
             <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
           </li>
         
       </ul>

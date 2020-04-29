@@ -69,6 +69,63 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记六（4）" class="title-HTTP笔记六（4） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/" data-id="ck9lb62rs0000d0q47rx42ovl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="响应首部字段"><a href="#响应首部字段" class="headerlink" title="响应首部字段"></a>响应首部字段</h3><p>响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。</p>
+<ol>
+<li>Accept-Ranges<br>作用：来告知客户端服务器是否能处理范围请求，以指定获取服务器端某个部分的资源。（可处理为bytes，反之none）</li>
+<li>Age<br>作用：告知客户端，源服务器在多久前创建了响应。字段值的单位为秒。</li>
+<li>ETag<br>作用：告知客户端实体标识。它是一种可将资源以字符串形式做唯一性标识的方式。服务器会为每份资源分配对应的 ETag 值。<br>ETag有强弱值之分，强ETag不论实体发生什么变化都会改变；弱ETag值用于提示资源是否相同，资源发生根本改变才变，且在字段值之前加W/。</li>
+<li>Location<br>作用：将响应接收方引导至某个与请求 URI 位置不同的资源。</li>
+<li>Proxy-Authenticate<br>作用：把由代理服务器所要求的认证信息发送给客户端。</li>
+<li>Retry-After<br>作用： 告知客户端应该在多久之后再次发送请求。主要配合状态码 503 Service Unavailable 响应，或 3xx Redirect 响应一起使用。</li>
+<li>Server<br>作用：告知客户端当前服务器上安装的 HTTP 服务器应用程序的信息。</li>
+<li>Vary<br>作用：对缓存进行控制。从代理服务器接收到源服务器返回包含 Vary 指定项的响应之后，若再要进行缓存，仅对请求中含有相同 Vary 指定首部字段的请求返回缓存。即使对相同资源发起请求，但由于 Vary 指定的首部字段不相同，因此必须要从源服务器重新获取资源。</li>
+<li>WWW-Authenticate<br>作用：告知客户端适用于访问请求 URI 所指定资源的认证方案（Basic 或是 Digest）和带参数提示的质询（challenge）。状态码 401 Unauthorized 响应中，肯定带有首部字段 WWW-Authenticate。</li></ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">
+    <time datetime="2020-04-29T11:18:31.000Z" class="entry-date">
+        2020-04-29
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记六（3）" class="title-HTTP笔记六（3） post type-post status-publish format-standard hentry">
     <!---->
 
@@ -613,57 +670,6 @@
 
 
   
-    <article id="title-伪类选择器" class="title-伪类选择器 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">伪类选择器</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck9h17oqd000a9sq4gps88qfc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>:link       访问前的样式（只能给a添加）<br>:visited    访问后的样式（只能给a添加）<br>:hover      鼠标滑入的样式<br>:active     鼠标点击的样式</p>
-<hr>
-<p>最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。</p>
-<hr>
-<p>:after :before    通过伪类方式给元素添加一段文本内容，使用content属性<br>:checked :disabled :focus     针对表单元素</p>
-<hr>
-<p>结构性伪类选择器<br>  :nth-of-type()  :nth-child()<br>  括号里从1开始，直接写n表示从0到无穷也就是全选。<br>  first-of-type() 选择第一项<br>  last-of-type()  选择最后一项<br>  only-of-type()  只有一项时使用</p>
-<hr>
-<p>  nth-of-type()和nth-child()的区别<br>  nth-of-type(n)是选择同一个父元素中相同子元素的第n个<br>  nth-child(n)是选择同一个父元素中所有子元素中的第n个<br>  eg:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure><br>  ul:nth-of-type(2)选择的是第二个li<br>  ul:nth-child(2)选择的是div<br>  注：这里若使用only-of-type选择div是可以的，因为只有一个div标签。</p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">
-    <time datetime="2020-04-14T14:15:20.000Z" class="entry-date">
-        2020-04-14
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -693,6 +699,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
           </li>
         
@@ -706,10 +716,6 @@
         
           <li>
             <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
           </li>
         
       </ul>
