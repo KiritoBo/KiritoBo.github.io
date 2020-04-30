@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>HTTP笔记七 | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="确保Web安全的HTTPSHTTP缺点 通信使用明文可能被窃听HTTP本身没有加密功能，，按 TCP&#x2F;IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。通过抓包或嗅探器工具就能收集互联网上流动的数据包了，常用的加密对象有如下几个：通信的加密：通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP笔记七">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="确保Web安全的HTTPSHTTP缺点 通信使用明文可能被窃听HTTP本身没有加密功能，，按 TCP&#x2F;IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。通过抓包或嗅探器工具就能收集互联网上流动的数据包了，常用的加密对象有如下几个：通信的加密：通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-30T11:59:05.000Z">
+<meta property="article:modified_time" content="2020-04-30T13:45:58.899Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-HTTP笔记七" class="title-HTTP笔记七 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      HTTP笔记七
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/" data-id="ck9mtn6ai0000wwq4cskwhzbf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="确保Web安全的HTTPS"><a href="#确保Web安全的HTTPS" class="headerlink" title="确保Web安全的HTTPS"></a>确保Web安全的HTTPS</h3><h4 id="HTTP缺点"><a href="#HTTP缺点" class="headerlink" title="HTTP缺点"></a>HTTP缺点</h4><ol>
+<li>通信使用明文可能被窃听<br>HTTP本身没有加密功能，，按 TCP/IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。<br>通过抓包或嗅探器工具就能收集互联网上流动的数据包了，常用的加密对象有如下几个：<br>通信的加密：通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输协议）的组合使用，加密 HTTP 的通信内容。（SSL与HTTP组合使用称为HTTPS或HTTP over SSL）<br>内容的加密：把 HTTP 报文里所含的内容进行加密处理。 （前提是客户端和服务器同时具备加密和解密机制）</li>
+<li>不验证通信方的身份就可能遭遇伪装<br>HTTP 协议中的请求和响应不会对通信方进行确认。<br>任何人都可以发起请求，服务器接收请求也会返回响应，会存在以下隐患：</li>
+</ol>
+<ul>
+<li>无法确定请求发送至目标的 Web 服务器是否是按真实意图返回响应的那台服务器。有可能是已伪装的 Web 服务器。</li>
+<li>无法确定响应返回到的客户端是否是按真实意图接收响应的那个客户端。有可能是已伪装的客户端。</li>
+<li>无法确定正在通信的对方是否具备访问权限。</li>
+<li>无法判定请求是来自何方、出自谁手。</li>
+<li>即使是无意义的请求也会接收。无法阻止海量请求下的 DoS 攻击（Denial of Service，拒绝服务攻击）。<br>使用SSL的证书可以用于确定对方，证书由第三方机构颁发，只要双方都有证书就可以互相确认。</li>
+</ul>
+<ol start="3">
+<li>无法证明报文完整性，可能已遭篡改<br>由于HTTP协议无法证明通信报文的完整性，即使内容被篡改也无法知道。<br>虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法，以及用来确认文件的数字签名方法。</li>
+</ol>
+<hr>
+<a id="more"></a>
+<p>为了防止上面的弊端，有必要使用HTTPS。</p>
+<h4 id="HTTP-加密-认证-完整性保护-HTTPS"><a href="#HTTP-加密-认证-完整性保护-HTTPS" class="headerlink" title="HTTP+ 加密 + 认证 + 完整性保护 =HTTPS"></a>HTTP+ 加密 + 认证 + 完整性保护 =HTTPS</h4><p>们把添加了加密及认证机制的 HTTP 称为 HTTPS（HTTP Secure）。<br>使用HTTPS通信时，改用https:// 且浏览器地址栏出现一个锁的标记。<br>实际上就是在HTTP和TCP之间加入了SSL，HTTP先和SSL通信再和TCP通信，之后就拥有了加密、证书和完整性保护功能。</p>
+<h4 id="相互交换密钥的公开密钥加密技术"><a href="#相互交换密钥的公开密钥加密技术" class="headerlink" title="相互交换密钥的公开密钥加密技术"></a>相互交换密钥的公开密钥加密技术</h4><p>SSL 采用一种叫做公开密钥加密（Public-key cryptography）的加密处理方式。（加密算法公开密钥保密）<br>共享加密密钥：加密和解密同用一个密钥，也被叫做对称密钥加密。这种方式的问题在于怎么安全发送密钥。<br>公开密钥加密：使用一对非对称的密钥。一把叫做私有密钥（private key），另一把叫做公开密钥（public key）。使用公开密钥加密方式，发送密文的一方使用对方的公开密钥进行加密处理，对方收到被加密的信息后，再使用自己的私有密钥进行解密。</p>
+<h4 id="证明公开密钥正确性的证书"><a href="#证明公开密钥正确性的证书" class="headerlink" title="证明公开密钥正确性的证书"></a>证明公开密钥正确性的证书</h4><p>公开密钥加密的问题就是无法证明公开密钥本身是真正的公开密钥，这就需要公开密钥证书来证明。<br>数字证书认证机构处于客户端与服务器双方都可信赖的第三方机构的立场上。<br>具体流程如下：</p>
+<ol>
+<li>服务器运营人员向数字证书认证机构提出公开密钥申请。</li>
+<li>数字证书认证机构在判明提出申请者的身份之后，会对已申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将该公开密钥放入公钥证书后绑定在一起。</li>
+<li>服务器将这份公钥证书以公开密钥加密方式发给客户端。</li>
+<li>客户端使用认证机构的公开密钥对公钥证书上的数字签名进行验证。（认证机构的公开密钥通常是浏览器开发商事先植入浏览器的）</li>
+</ol>
+<hr>
+<h4 id="EV-SSL证书"><a href="#EV-SSL证书" class="headerlink" title="EV SSL证书"></a>EV SSL证书</h4><p>EV SSL 证书是基于国际标准的认证指导方针颁发的证书。其严格规定了对运营组织是否真实的确认方针。（持有EV SSL证书的网站地址栏背景是绿色的）</p>
+<h4 id="HTTPS-的安全通信机制"><a href="#HTTPS-的安全通信机制" class="headerlink" title="HTTPS 的安全通信机制"></a>HTTPS 的安全通信机制</h4><p>HTTPS通信步骤如下</p>
+<ol>
+<li><strong>客户端</strong>通过发送 Client Hello 报文开始 SSL 通信。报文中包含客户端支持的 SSL 的指定版本、加密组件（Cipher Suite）列表（所使用的加密算法及密钥长度等）。</li>
+<li><strong>服务器</strong>可进行 SSL 通信时，会以 Server Hello 报文作为应答，其中包含 SSL 版本以及加密组件（从接收到的客户端加密组件内筛选出来的）。</li>
+<li><strong>服务器</strong>发送Certificate报文，包含公开密钥证书。</li>
+<li>最后<strong>服务器</strong>发送Server Hello Done报文通知客户端，第一次SSL握手协商部分结束。</li>
+<li><strong>客户端</strong>以 Client Key Exchange 报文作为回应，包含通信加密中使用的一种被称为 Pre-master secret 的随机密码串。报文已用第三步中的公开密钥进行加密。</li>
+<li><strong>客户端</strong>发送Change Cipher Spec报文，提示服务器之后的通信采用Pre-master secret密钥加密。</li>
+<li><strong>客户端</strong>发送Finished报文，包含连接至今全部报文的整体校验值，这次握手协商能否成功要以<strong>服务器</strong>是否能正确解密该报文作为判定依据。</li>
+<li><strong>服务器</strong>同样发送 Change Cipher Spec 报文。</li>
+<li><strong>服务器</strong>同样发送 Finished 报文。</li>
+<li><strong>服务器和客户端</strong>的 Finished 报文交换完毕之后，SSL 连接建立完成保护通信，开始发送HTTP请求。</li>
+<li>应用层协议通信，即发送 HTTP 响应。 </li>
+<li>最后由<strong>客户端断</strong>开连接。断开连接时，发送 close_notify 报文。</li>
+<li>再发送 TCP FIN 报文来关闭与 TCP 的通信。<br>在以上流程中，应用层发送数据时会附加一种叫做 MAC（Message Authentication Code）的报文摘要。MAC 能够查知报文是否遭到篡改，从而保护报文的完整性。</li>
+</ol>
+<hr>
+<h4 id="SSL速度问题"><a href="#SSL速度问题" class="headerlink" title="SSL速度问题"></a>SSL速度问题</h4><p>SSL 的慢分两种。一种是指通信慢。另一种是指由于大量消耗 CPU 及内存等资源，导致处理速度变慢。 （比HTTP慢2到100倍）<br>使用SSL加速器（专用服务器）来改善。<br>由于速度慢，且证书需要花钱，值有必要的情况才使用HTTPS通信。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">
+    <time datetime="2020-04-30T11:59:05.000Z" class="entry-date">
+        2020-04-30
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/" rel="next">HTTP笔记六（4） <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">HTTP笔记六（2）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/26/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%881%EF%BC%89/">HTTP笔记六（1）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
