@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>HTTP笔记八 | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="确认访问用户身份的认证认证是为了弄清谁在访问服务器，需要核对客户端的信息，通常指以下这些：  密码：只有本人才会知道的字符串信息。 动态令牌：仅限本人持有的设备内显示的一次性密码。 数字证书：仅限本人（终端）持有的信息。 生物认证：指纹和虹膜等本人的生理信息。 IC卡等：仅限本人持有的信息。  HTTP认证方式 BASIC认证（基本认证） DIGEST认证（摘要认证） SSL客户端认证 FormB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP笔记八">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="确认访问用户身份的认证认证是为了弄清谁在访问服务器，需要核对客户端的信息，通常指以下这些：  密码：只有本人才会知道的字符串信息。 动态令牌：仅限本人持有的设备内显示的一次性密码。 数字证书：仅限本人（终端）持有的信息。 生物认证：指纹和虹膜等本人的生理信息。 IC卡等：仅限本人持有的信息。  HTTP认证方式 BASIC认证（基本认证） DIGEST认证（摘要认证） SSL客户端认证 FormB">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-01T15:09:47.000Z">
+<meta property="article:modified_time" content="2020-05-01T16:06:02.440Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-HTTP笔记八" class="title-HTTP笔记八 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      HTTP笔记八
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/" data-id="ck9oe23rb0000n4q4cdjpbkr7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="确认访问用户身份的认证"><a href="#确认访问用户身份的认证" class="headerlink" title="确认访问用户身份的认证"></a>确认访问用户身份的认证</h3><p>认证是为了弄清谁在访问服务器，需要核对客户端的信息，通常指以下这些：</p>
+<ul>
+<li>密码：只有本人才会知道的字符串信息。</li>
+<li>动态令牌：仅限本人持有的设备内显示的一次性密码。</li>
+<li>数字证书：仅限本人（终端）持有的信息。</li>
+<li>生物认证：指纹和虹膜等本人的生理信息。</li>
+<li>IC卡等：仅限本人持有的信息。</li>
+</ul>
+<h3 id="HTTP认证方式"><a href="#HTTP认证方式" class="headerlink" title="HTTP认证方式"></a>HTTP认证方式</h3><ul>
+<li>BASIC认证（基本认证）</li>
+<li>DIGEST认证（摘要认证）</li>
+<li>SSL客户端认证</li>
+<li>FormBase认证（基于表单认证）</li>
+<li>Windows统一认证（Keberos认证，NTLM认证）<a id="more"></a>
+
+</li>
+</ul>
+<h4 id="BASIC认证"><a href="#BASIC认证" class="headerlink" title="BASIC认证"></a>BASIC认证</h4><p>是Web服务器与通信客户端之间进行的认证方式。<br>认证步骤：</p>
+<ol>
+<li>客户端发送的请求资源需要BASIC认证时，服务器随状态码401 Authorization Required，返回带 WWW-Authenticate 首部字段的响应。该字段包含认证的方式（BASIC)以级 Request-URI 安全与字符串（realm）。</li>
+<li>接收到状态码 401 的客户端为了通过 BASIC 认证，需要将用户 ID 及密码发送给服务器。发送的字符串内容是由用户 ID 和密码构成，两者中间以冒号（:）连接后，再经过 Base64 编码处理。</li>
+<li>接收到包含首部字段 Authorization 请求的服务器，会对认证信息的正确性进行验证。如验证通过，则返回一条包含 Request-URI 资源的响应。认证成功返回状态码200，失败返回401。</li>
+</ol>
+<p>BASIC 认证使用上不够便捷灵活（一般浏览器无法实现认证注销），且达不到多数 Web 网站期望的安全性等级（仅仅是Base64编码并未加密），因此它并不常用。 </p>
+<h4 id="DIGEST认证"><a href="#DIGEST认证" class="headerlink" title="DIGEST认证"></a>DIGEST认证</h4><p>DIGEST 认证同样使用质询/响应的方式（challenge/response），但不会像 BASIC 认证那样直接发送明文密码。<br>质询响应方式：一方先发送认证要求给另一方，接着使用从另一方那接收到的质询码计算生成响应码，最后将响应码返回给对方进行认证。（发送的只是响应摘要及计算结果，安全性高了）<br>认证步骤：</p>
+<ol>
+<li>请求需认证的资源时，服务器会随着状态码 401 Authorization Required，返回带 WWW-Authenticate 首部字段的响应。该字段内包含质问响应方式认证所需的临时质询码（随机数，nonce）。<br>首部字段必须包含 realm 和 nonce，nonce是一种每次随返回的 401 响应生成的任意随机字符串，通常由Base64编码的十六进制数组成。</li>
+<li>接收到 401 状态码的客户端，返回的响应中包含 DIGEST 认证必须的首部字段 Authorization 信息。<br>首部字段必须包含username，realm，nonce，uri和response字段信息。</li>
+<li>接收到包含首部字段 Authorization 请求的服务器，会确认认证信息的正确性。认证通过后则返回包含 Request-URI 资源的响应。认证成功返回状态码200，失败返回401。</li>
+</ol>
+<p>虽然DIGEST认证安全等级高于BASIC，但是和HTTPS比还是很弱，没有防止用户伪装的保护机制，适用范围受限。</p>
+<h4 id="SSL客户端认证"><a href="#SSL客户端认证" class="headerlink" title="SSL客户端认证"></a>SSL客户端认证</h4><p>SSL 客户端认证是借由 HTTPS 的客户端证书完成认证的方式。凭借客户端证书认证，服务器可确认访问是否来自已登录的客户端。<br>认证步骤：</p>
+<ol>
+<li>接收到需要认证资源的请求，服务器会发送 Certificate Request 报文，要求客户端提供客户端证书。 </li>
+<li>用户选择将发送的客户端证书后，客户端会把客户端证书信息以 Client Certificate 报文方式发送给服务器。</li>
+<li>服务器验证客户端证书验证通过后方可领取证书内客户端的公开密钥，然后开始HTTPS加密通信。</li>
+</ol>
+<p>多数情况下，SSL客户端认证会和基于表单认证组合形成双因素认证来使用，就是认证过程中不仅需要密码，还需要申请认证者提供其他持有信息。（SSL认证客户端计算机，表单认证用户本人）</p>
+<h4 id="基于表单认证"><a href="#基于表单认证" class="headerlink" title="基于表单认证"></a>基于表单认证</h4><p>客户端会向服务器上的 Web 应用程序发送登录信息（Credential），按登录信息的验证结果认证。（不是HTTP协议定义的）<br>由于 HTTP 是无状态协议，而基于表单认证又是使用用户ID密码来认证，所以之前认证成功的用户状态不能在协议层面保存下来。于是使用 Cookie 来管理 Session 弥补 HTTP 协议中不存在的状态管理功能。<br>认证步骤：</p>
+<ol>
+<li>客户端把用户 ID和密码等登录信息放入报文的实体部分， 通常是以 POST 方法把请求发送给服务器。而这时，会使用 HTTPS 通信来进行 HTML 表单画面的显示和用户输入数据的发送。 </li>
+<li>服务器发放用以识别用户的 Session ID。通过验证从客户端发送过来的登录信息进行身份认证，然后把用户的认证状态与 Session ID 绑定后记录在服务器端。 返回响应时会在首部字段 Set-Cookie 内写入 Session ID。<br>为减轻跨站脚本攻击（XSS）造成的损失，建议事先在 Cookie 内加上 httponly 属性。 </li>
+<li>客户端接收到从服务器端发来的 Session ID 后，会将其作为 Cookie 保存在本地。下次向服务器发送请求时，浏览器会自动发送 Cookie，所以 Session ID 也随之发送到服务器。服务器端可通过验证接收到的 Session ID 识别用户和其认证状态。</li>
+</ol>
+<p>基于表单认证的登录信息及认证过程都无标准化的方法， 服务器端应如何保存用户提交的密码等登录信息等也没有标准化。 </p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">
+    <time datetime="2020-05-01T15:09:47.000Z" class="entry-date">
+        2020-05-01
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/" rel="next">HTTP笔记七 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">HTTP笔记六（2）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

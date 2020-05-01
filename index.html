@@ -69,6 +69,66 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记八" class="title-HTTP笔记八 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/" data-id="ck9oe23rb0000n4q4cdjpbkr7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="确认访问用户身份的认证"><a href="#确认访问用户身份的认证" class="headerlink" title="确认访问用户身份的认证"></a>确认访问用户身份的认证</h3><p>认证是为了弄清谁在访问服务器，需要核对客户端的信息，通常指以下这些：</p>
+<ul>
+<li>密码：只有本人才会知道的字符串信息。</li>
+<li>动态令牌：仅限本人持有的设备内显示的一次性密码。</li>
+<li>数字证书：仅限本人（终端）持有的信息。</li>
+<li>生物认证：指纹和虹膜等本人的生理信息。</li>
+<li>IC卡等：仅限本人持有的信息。</li>
+</ul>
+<h3 id="HTTP认证方式"><a href="#HTTP认证方式" class="headerlink" title="HTTP认证方式"></a>HTTP认证方式</h3><ul>
+<li>BASIC认证（基本认证）</li>
+<li>DIGEST认证（摘要认证）</li>
+<li>SSL客户端认证</li>
+<li>FormBase认证（基于表单认证）</li>
+<li>Windows统一认证（Keberos认证，NTLM认证）</li></ul>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">
+    <time datetime="2020-05-01T15:09:47.000Z" class="entry-date">
+        2020-05-01
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记七" class="title-HTTP笔记七 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -615,66 +675,6 @@
 
 
   
-    <article id="title-HTTP笔记" class="title-HTTP笔记 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/">HTTP笔记</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/" data-id="ck9h17oq400029sq4aon4d1xv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h4 id="网络基础TCP-IP"><a href="#网络基础TCP-IP" class="headerlink" title="网络基础TCP/IP"></a>网络基础TCP/IP</h4><p>通常使用的网络（包括互联网）是在 TCP/IP 协议族的基础上运作的。而 HTTP 属于它内部的一个子集。</p>
-<h4 id="TCP-IP的分层管理"><a href="#TCP-IP的分层管理" class="headerlink" title="TCP/IP的分层管理"></a>TCP/IP的分层管理</h4><p>TCP/IP 协议族里重要的一点就是分层。TCP/IP 协议族按层次分别分为以下 4 层：应用层、传输层、网络层和数据链路层。<br>层次化的好处：改动设计时不不用替换整体，只需吧变动的层次替换掉，把各层之间的接口部分规划好之后，每个层次内部的设计就能够自由改动了。</p>
-<ol>
-<li>应用层：应用层决定了向用户提供应用服务时通信的活动。（包括FTP文件传输协议，DNS域名系统，HTTP协议等）</li>
-<li>传输层：提供处于网络连接中的两台计算机之间的数据传输。（有两个性质不同的协议，TCP传输控制协议，UDP用户数据报协议）。</li>
-<li>网络层：用来处理在网络上流动的数据包。数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。</li>
-<li>链路层：用来处理连接网络的硬件部分。（包括操作系统硬件的设备驱动，NIC网卡，光纤等物理可见部分）</li>
-</ol>
-<hr>
-<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。这种把数据信息包装起来的做法称为封装（encapsulate）。</p>
-<h4 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h4><p>IP（Internet Protocol）网际协议位于网络层。作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC地址。（IP可变MAC基本不变）</p>
-<h4 id="使用-ARP-协议凭借-MAC-地址进行通信"><a href="#使用-ARP-协议凭借-MAC-地址进行通信" class="headerlink" title="使用 ARP 协议凭借 MAC 地址进行通信"></a>使用 ARP 协议凭借 MAC 地址进行通信</h4><p>IP间通信是利用各个中转设备的MAC地址来搜索下一个目标。这时，会采用 ARP 协议。ARP 是一种用以解析地址的协议，根据通信方的 IP 地址就可以反查出对应的 MAC 地址。</p>
-<h4 id="路由选择routing"><a href="#路由选择routing" class="headerlink" title="路由选择routing"></a>路由选择routing</h4><p>在到达通信目标前的中转过程中，那些计算机和路由器等网络设备只能获悉很粗略的传输路线。</p>
-<h4 id="TCP协议三次握手"><a href="#TCP协议三次握手" class="headerlink" title="TCP协议三次握手"></a>TCP协议三次握手</h4><p>发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后，回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发送端再回传一个带 ACK 标志的数据包，代表“握手”结束。若在握手过程中某个阶段莫名中断，TCP 协议会再次以相同的顺序发送相同的数据包。（用来保证通信的可靠性）</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/20/HTTP%E7%AC%94%E8%AE%B0/">
-    <time datetime="2020-04-20T11:38:35.000Z" class="entry-date">
-        2020-04-20
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -704,6 +704,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
           </li>
         
@@ -717,10 +721,6 @@
         
           <li>
             <a href="/2020/04/27/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%882%EF%BC%89/">HTTP笔记六（2）</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/26/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%881%EF%BC%89/">HTTP笔记六（1）</a>
           </li>
         
       </ul>
