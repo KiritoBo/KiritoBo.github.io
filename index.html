@@ -69,6 +69,63 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-AJAX笔记" class="title-AJAX笔记 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/" data-id="ck9y4p3s100009sq4co0w479u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="AJAX笔记"><a href="#AJAX笔记" class="headerlink" title="AJAX笔记"></a>AJAX笔记</h3><h4 id="什么是AJAX？"><a href="#什么是AJAX？" class="headerlink" title="什么是AJAX？"></a>什么是AJAX？</h4><p>Ajax 即（Asynchronous Javascript And XML）异步 JavaScript 和 XML，是指一种创建交互式网页应用的网页开发技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<h4 id="AJAX的优缺点"><a href="#AJAX的优缺点" class="headerlink" title="AJAX的优缺点"></a>AJAX的优缺点</h4><p>优点：</p>
+<ul>
+<li>能在不更新整个页面的前提下维护数据，使 Web 应用程序速度更快。</li>
+<li>Ajax不需要任何浏览器插件，用户允许JS在浏览器上执行即可。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>可能破坏浏览器的后退与加入收藏书签功能。<br>解决办法：<br>HTML5之前的方法大多是在用户单击后退按钮访问历史记录时，通过创建或使用一个隐藏的 IFRAME 来重现页面上的变更；使用URL片断标识符（通常被称为锚点，即URL中#后面的部分）来保持追踪，允许用户回到指定的某个应用程序状态。<br>HTML5以后可以直接操作浏览历史，并以字符串形式存储网页状态，将网页加入网页收藏夹或书签时状态会被隐形地保留。</li>
+<li>网络延迟，不给予用户明确的回应，会使用户感到厌烦。<br>解决办法：使用一个可视化的组件来告诉用户系统正在进行后台操作并且正在读取数据和内容。</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">
+    <time datetime="2020-05-08T10:54:33.000Z" class="entry-date">
+        2020-05-08
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记十" class="title-HTTP笔记十 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -619,74 +676,10 @@
 
 
   
-    <article id="title-HTTP笔记四" class="title-HTTP笔记四 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">HTTP笔记四</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/" data-id="ck9wqcw0v0009hsq44pijhjp9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="返回结果的-HTTP-状态码"><a href="#返回结果的-HTTP-状态码" class="headerlink" title="返回结果的 HTTP 状态码"></a>返回结果的 HTTP 状态码</h3><h4 id="状态码作用"><a href="#状态码作用" class="headerlink" title="状态码作用"></a>状态码作用</h4><p>状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现错误。</p>
-<h4 id="状态码的类别"><a href="#状态码的类别" class="headerlink" title="状态码的类别"></a>状态码的类别</h4><p>状态码由三位数字和原因短语组成，数字第一位指定响应类别，共有五种。</p>
-<img src="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/eg1.jpg" class>
-<p>常用的状态码主要有14种：</p>
-<ol>
-<li>200 OK ：表示从客户端发来的请求在服务器端被正常处理了。</li>
-<li>204 No Content ：代表服务器接收的请求已成功处理，但在返回的响应报文中不含实体的主体部分。</li>
-<li>206 Partical Content ：表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。响应报文中包含由 Content-Range 指定范围的实体内容。 （部分内容）</li>
-<li>301 Moved Permanently ：表示请求的资源已被分配了新的 URI，以后应使用资源现在所指的 URI。（永久性重定向）</li>
-<li>302 Found ：该状态码表示请求的资源已被分配了新的 URI，希望用户（本次）能使用新的 URI 访问。 （临时性重定向）</li>
-<li>303 See Other ：表示由于请求对应的资源存在着另一个 URI，应使用 GET 方法定向获取请求的资源。（与302类似但是用303是最理想的）</li>
-<li>304 Not Modified ：表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但未满足条件的情况。（附带条件的请求是指采用 GET 方法的请求报文中包含 If-Match，If-ModifiedSince，If-None-Match，If-Range，If-Unmodified-Since 中任一首部。）</li>
-<li>307 Temporary Redirect ：该状态码与 302 Found 有着相同的含义。（临时重定向，禁止POST变换成GET）</li>
-<li>400 Bad Request ：表示请求报文中存在语法错误。（需要修改内容之后再次发送）</li>
-<li>401 Unauthorized ：发送的请求需要有通过 HTTP 认证（BASIC 认证、 DIGEST 认证）的认证信息。（第一次响应会弹出认证窗口，第二次响应说明用户认证失败）</li>
-<li>403 Forbidden ：表明对请求资源的访问被服务器拒绝了。</li>
-<li>404 Not Found ：表明服务器上无法找到请求的资源或者服务器拒绝请求不想说明理由。（看了这么多年的404终于知道什么意思了2333）</li>
-<li>500 Internal Server Error ：表明服务器端在执行请求时发生了错误。也有可能是 Web 应用存在的 bug 或某些临时的故障。</li>
-<li>503 Service Unavailable ：表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</li>
-</ol>
-<hr>
-<p>注：不少返回的状态码响应都是错误的，但是用户可能察觉不到这点。比如 Web 应用程序内部发生错误，状态码依然返回 200 OK，这种情况也经常遇到。</p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/23/HTTP%E7%AC%94%E8%AE%B0%E5%9B%9B/">
-    <time datetime="2020-04-23T11:25:19.000Z" class="entry-date">
-        2020-04-23
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
       </nav>
     </nav>
   
@@ -712,6 +705,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/07/HTTP%E7%AC%94%E8%AE%B0%E5%8D%81/">HTTP笔记十</a>
           </li>
         
@@ -725,10 +722,6 @@
         
           <li>
             <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
           </li>
         
       </ul>
