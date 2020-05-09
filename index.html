@@ -69,6 +69,66 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-Vue笔记一" class="title-Vue笔记一 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">Vue笔记一</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/" data-id="ck9zo1yqc0000n4q4gb22buzg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="Vue初始"><a href="#Vue初始" class="headerlink" title="Vue初始"></a>Vue初始</h2><h3 id="Vue是什么"><a href="#Vue是什么" class="headerlink" title="Vue是什么"></a>Vue是什么</h3><ul>
+<li>Vue 是一套用于构建用户界面的渐进式框架。<br>渐进式就是可以把Vue作为应用的一部分嵌入其中（我个人的理解就是做加法，你加了什么他就实现什么，根据自己的需求一点一点加，不必使用框架的全部内容）</li>
+<li>与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。<br>自底向上逐层应用就是从基础写起，逐层网上添加效果。</li>
+<li>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</li>
+<li>另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。<h3 id="第一个Vue代码"><a href="#第一个Vue代码" class="headerlink" title="第一个Vue代码"></a>第一个Vue代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">  &lt;title&gt;My first Vue app&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script src="https:/</span><span class="regexp">/cdn.jsdelivr.net/</span>npm/vue/dist/vue.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;div id="</span>app<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &lt;script&gt;</span></span><br><span class="line"><span class="string">    let app = new Vue(&#123;</span></span><br><span class="line"><span class="string">      el: '#app',</span></span><br><span class="line"><span class="string">      data:&#123;</span></span><br><span class="line"><span class="string">        message:'Hello Vue.js!'</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界面自动改变。（只需操作Vue实例里的数据，在控制台修改app.message的值网页就会随之更新）<br>简单参数：</li>
+<li>el：决定这个Vue对象挂载到哪一个元素（类型：string|HTMLElement）。</li>
+<li>data：用于定义属性，实例对应的数据对象（类型：Object|Function）。</li>
+<li>methods：用于定义函数（方法）（类型：key：Function）。</li>
+</ul>
+<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>MVVM 是Model-View-ViewModel 的缩写，它是一种基于前端开发的架构模式，其核心是提供对View 和 Model 的双向数据绑定，这使得Model 的状态改变可以自动传递给 View，即所谓的数据双向绑定。</p>
+<h4 id="Vue的MVVM"><a href="#Vue的MVVM" class="headerlink" title="Vue的MVVM"></a>Vue的MVVM</h4><img src="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg1.jpg" class>
+<p>Vue的MVVM核心就是VM（ViewModel），一方面实现了Data Binding（数据绑定）将Model的改变实时反映到View中；另一方面实现了DOM Listener（DOM监听）将DOM发生的事件监听到并改变Model的数据。</p>
+<p>以上面的代码举例，div标签是展示出来的，他就是view层；而data：{}就是Model层；new Vue()就是ViewModel。当data中的数据改变时，通过new Vue()使div中的数据改变，当div中有其他操作指令如click等，就会经过new Vue()解析，回调到Model层中找到相应的函数。</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">
+    <time datetime="2020-05-09T10:45:53.000Z" class="entry-date">
+        2020-05-09
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-AJAX笔记" class="title-AJAX笔记 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -621,61 +681,6 @@
 
 
   
-    <article id="title-HTTP笔记五" class="title-HTTP笔记五 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">HTTP笔记五</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/" data-id="ck9wqcw0p0001hsq45pi52xnv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="与-HTTP-协作的-Web-服-务器"><a href="#与-HTTP-协作的-Web-服-务器" class="headerlink" title="与 HTTP 协作的 Web 服 务器"></a>与 HTTP 协作的 Web 服 务器</h3><h4 id="用单台虚拟主机实现多个域名"><a href="#用单台虚拟主机实现多个域名" class="headerlink" title="用单台虚拟主机实现多个域名"></a>用单台虚拟主机实现多个域名</h4><p>一台服务器可以利用虚拟主机实现多台服务器的效果。<br>在互联网上，域名通过 DNS 服务映射到 IP 地址（域名解析）之后访问目标网站，如果一个服务器托管了两个域名就需要判断访问哪个域名，且域名的IP地址是一样的。因此在发送 HTTP 请求时，必须在 Host 首部内完整指定主机名或域名的 URI。</p>
-<h4 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h4><ul>
-<li>代理服务器的基本行为就是接收客户端发送的请求后转发给其他服务器，不改变请求URI发给源服务器，源服务器响应经过代理服务器传给客户端。</li>
-<li>HTTP通信过程中可以级联多台代理服务器，每经过一次代理服务器，会追加写入 Via 首部信息。</li>
-<li>使用代理服务器的理由有：利用缓存技术减少网络带宽的流量，组织内部针对特定网站的访问控制，以获取访问日志为主要目的，等等。</li>
-<li>缓存代理：代理转发响应时，缓存代理（Caching Proxy）会预先将资源的副本（缓存）保存在代理服务器上。<br>当代理再次接收到对相同资源的请求时，就可以不从源服务器那里获取资源，而是将之前缓存的资源作为响应返回。</li>
-<li>透明代理：转发请求或响应时，不对报文做任何加工的代理类型被称为透明代理（Transparent Proxy）。</li>
-</ul>
-<hr>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/24/HTTP%E7%AC%94%E8%AE%B0%E4%BA%94/">
-    <time datetime="2020-04-24T10:58:40.000Z" class="entry-date">
-        2020-04-24
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -705,6 +710,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">Vue笔记一</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
           </li>
         
@@ -718,10 +727,6 @@
         
           <li>
             <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
           </li>
         
       </ul>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Vue笔记一 | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Vue初始Vue是什么 Vue 是一套用于构建用户界面的渐进式框架。渐进式就是可以把Vue作为应用的一部分嵌入其中（我个人的理解就是做加法，你加了什么他就实现什么，根据自己的需求一点一点加，不必使用框架的全部内容） 与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。自底向上逐层应用就是从基础写起，逐层网上添加效果。 Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue笔记一">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="Vue初始Vue是什么 Vue 是一套用于构建用户界面的渐进式框架。渐进式就是可以把Vue作为应用的一部分嵌入其中（我个人的理解就是做加法，你加了什么他就实现什么，根据自己的需求一点一点加，不必使用框架的全部内容） 与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。自底向上逐层应用就是从基础写起，逐层网上添加效果。 Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg1.jpg">
+<meta property="og:image" content="https://github.com/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg2.png">
+<meta property="article:published_time" content="2020-05-09T10:45:53.000Z">
+<meta property="article:modified_time" content="2020-05-09T13:30:26.333Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg1.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-Vue笔记一" class="title-Vue笔记一 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Vue笔记一
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/" data-id="ck9zo1yqc0000n4q4gb22buzg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="Vue初始"><a href="#Vue初始" class="headerlink" title="Vue初始"></a>Vue初始</h2><h3 id="Vue是什么"><a href="#Vue是什么" class="headerlink" title="Vue是什么"></a>Vue是什么</h3><ul>
+<li>Vue 是一套用于构建用户界面的渐进式框架。<br>渐进式就是可以把Vue作为应用的一部分嵌入其中（我个人的理解就是做加法，你加了什么他就实现什么，根据自己的需求一点一点加，不必使用框架的全部内容）</li>
+<li>与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。<br>自底向上逐层应用就是从基础写起，逐层网上添加效果。</li>
+<li>Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</li>
+<li>另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。<h3 id="第一个Vue代码"><a href="#第一个Vue代码" class="headerlink" title="第一个Vue代码"></a>第一个Vue代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">  &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">  &lt;title&gt;My first Vue app&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">  &lt;script src="https:/</span><span class="regexp">/cdn.jsdelivr.net/</span>npm/vue/dist/vue.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">  &lt;div id="</span>app<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;</span></span><br><span class="line"><span class="string">  &lt;/div&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  &lt;script&gt;</span></span><br><span class="line"><span class="string">    let app = new Vue(&#123;</span></span><br><span class="line"><span class="string">      el: '#app',</span></span><br><span class="line"><span class="string">      data:&#123;</span></span><br><span class="line"><span class="string">        message:'Hello Vue.js!'</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">  &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界面自动改变。（只需操作Vue实例里的数据，在控制台修改app.message的值网页就会随之更新）<br>简单参数：</li>
+<li>el：决定这个Vue对象挂载到哪一个元素（类型：string|HTMLElement）。</li>
+<li>data：用于定义属性，实例对应的数据对象（类型：Object|Function）。</li>
+<li>methods：用于定义函数（方法）（类型：key：Function）。</li>
+</ul>
+<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>MVVM 是Model-View-ViewModel 的缩写，它是一种基于前端开发的架构模式，其核心是提供对View 和 Model 的双向数据绑定，这使得Model 的状态改变可以自动传递给 View，即所谓的数据双向绑定。</p>
+<h4 id="Vue的MVVM"><a href="#Vue的MVVM" class="headerlink" title="Vue的MVVM"></a>Vue的MVVM</h4><img src="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg1.jpg" class>
+<p>Vue的MVVM核心就是VM（ViewModel），一方面实现了Data Binding（数据绑定）将Model的改变实时反映到View中；另一方面实现了DOM Listener（DOM监听）将DOM发生的事件监听到并改变Model的数据。</p>
+<p>以上面的代码举例，div标签是展示出来的，他就是view层；而data：{}就是Model层；new Vue()就是ViewModel。当data中的数据改变时，通过new Vue()使div中的数据改变，当div中有其他操作指令如click等，就会经过new Vue()解析，回调到Model层中找到相应的函数。</p>
+<a id="more"></a>
+<h3 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h3><img src="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/eg2.png" class>
+<p>在整个生命周期中会运行一些<strong>生命周期钩子</strong>的函数，即图中红框内容，这给了用户在不同阶段添加自己的代码的机会。<br>这里放上一个连接，大佬写的很详细，评论区也指出了错误更好去理解。<br><a href="https://segmentfault.com/a/1190000011381906" target="_blank" rel="noopener">详解vue生命周期</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">
+    <time datetime="2020-05-09T10:45:53.000Z" class="entry-date">
+        2020-05-09
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/" rel="next">AJAX笔记 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">Vue笔记一</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/07/HTTP%E7%AC%94%E8%AE%B0%E5%8D%81/">HTTP笔记十</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/06/HTTP%E7%AC%94%E8%AE%B0%E4%B9%9D/">HTTP笔记九</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
