@@ -23,7 +23,7 @@
 <meta property="og:description" content="插值操作文本 Mustache语法（双大括号）最常见的就是“Mustache”语法，即双大括号,可以直接写变量，也可写简单的表达式或空格1&lt;h2&gt;&amp;#123;&amp;#123;message&amp;#125;&amp;#125;&lt;&#x2F;h2&gt; v-once使用v-once可以一次性插值，数据改变时插值内容也不会更新1&lt;h2 v-once&gt;&amp;#123;&amp;#123;message&amp;#125">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-09T13:31:59.000Z">
-<meta property="article:modified_time" content="2020-05-10T01:57:59.804Z">
+<meta property="article:modified_time" content="2020-05-10T14:39:24.889Z">
 <meta property="article:author" content="KiritoBo">
 <meta name="twitter:card" content="summary">
   
@@ -97,6 +97,7 @@
 </ul>
 <h3 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h3><p>为了输出html代码，需要使用v-html指令<br><code>&lt;h2 v-html=&quot;url&quot;&gt;&lt;/h2&gt;</code><br><code>url:&lt;a href=&quot;http://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;</code><br>这里h2标签就会变成百度一下的连接，而不是显示纯文本。</p>
 <p>注：站点上动态渲染的任意 HTML 可能会非常危险，因为它很容易导致 XSS 攻击。请只对可信内容使用 HTML 插值，绝不要对用户提供的内容使用插值。</p>
+<a id="more"></a>
 <h3 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a>v-pre</h3><p>直接将h2里面的内容原封不动显示出来</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-pre</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -167,6 +168,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E4%B8%89/">Vue笔记三</a>
           </li>
         
@@ -180,10 +185,6 @@
         
           <li>
             <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/07/HTTP%E7%AC%94%E8%AE%B0%E5%8D%81/">HTTP笔记十</a>
           </li>
         
       </ul>

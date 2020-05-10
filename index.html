@@ -69,6 +69,76 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-Vue笔记四" class="title-Vue笔记四 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/" data-id="cka15zzcw00000wq402rv9shm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="事件监听v-on"><a href="#事件监听v-on" class="headerlink" title="事件监听v-on"></a>事件监听v-on</h3><ul>
+<li>缩写：@</li>
+<li>预期：Function | Inline Statement | Object</li>
+<li>参数：event</li>
+</ul>
+<p>用在普通元素上时，只能监听原生 DOM 事件。用在自定义元素组件上时，也可以监听子组件触发的自定义事件。</p>
+<p>在监听原生 DOM 事件时，需要注意参数问题：</p>
+<ol>
+<li>如果该方法不需要额外参数那么方法后面的()可以不加 即btnClick后面可不写()<br><code>&lt;button @click=&quot;btnClick&quot;&gt;按钮&lt;/button&gt;</code><br>注：如果方法本身中有一个参数，那么会默认将原生事件event参数传递进去。</li>
+<li>如果需要传入某个参数同时需要event时，可以通过$event（手动获取event）传入事件。<br><code>&lt;button @click=&quot;btnClick(&#39;abc&#39;,$event)&quot;&gt;按钮&lt;/button&gt;</code></li>
+</ol>
+<h4 id="v-on修饰符"><a href="#v-on修饰符" class="headerlink" title="v-on修饰符"></a>v-on修饰符</h4><ul>
+<li>.stop - 调用 event.stopPropagation()。  <code>@click.stop</code>阻止冒泡</li>
+<li>.prevent - 调用 event.preventDefault()。 阻止默认事件</li>
+<li>.{keyCode | keyAlias} - 只当事件是从特定键盘按键触发时才触发回调。</li>
+<li>.native - 监听组件根元素的原生事件。</li>
+<li>.once - 只触发一次回调。</li>
+<li>.capture - 添加事件侦听器时使用 capture 模式。</li>
+<li>.self - 只当事件是从侦听器绑定的元素本身触发时才触发回调。</li>
+<li>.left - (2.2.0) 只当点击鼠标左键时触发。</li>
+<li>.right - (2.2.0) 只当点击鼠标右键时触发。</li>
+<li>.middle - (2.2.0) 只当点击鼠标中键时触发。</li>
+<li>.passive - (2.3.0) 以 { passive: true } 模式添加侦听器。</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">
+    <time datetime="2020-05-10T04:10:54.000Z" class="entry-date">
+        2020-05-10
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-Vue笔记三" class="title-Vue笔记三 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -90,7 +160,13 @@
 
     <div class="entry-content">
       
-        
+        <h2 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h2><p>为了使html模板内的表达式便于维护，复杂逻辑使用计算属性处理。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;fullName&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Kirito'</span>,</span><br><span class="line">    lastName: <span class="string">'Bo'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed:&#123;</span><br><span class="line">    fullname()&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.fitstName + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="计算属性的setter和getter"><a href="#计算属性的setter和getter" class="headerlink" title="计算属性的setter和getter"></a>计算属性的setter和getter</h3><p>一般没有setter方法，是只读属性。<br>计算属性默认只有 getter，不过在需要时也可以提供一个 setter</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: &#123;</span><br><span class="line">    <span class="comment">// getter</span></span><br><span class="line">    <span class="keyword">get</span>: function () &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// setter</span></span><br><span class="line">    <span class="keyword">set</span>: function (newValue) &#123;</span><br><span class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</span><br><span class="line">      <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">      <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="计算属性和方法的比较"><a href="#计算属性和方法的比较" class="headerlink" title="计算属性和方法的比较"></a>计算属性和方法的比较</h3><p>我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是<strong>计算属性是基于它们的响应式依赖进行缓存的</strong>。<br>也就是说每当触发重新渲染时，调用方法就会执行一次函数，而计算属性有缓存就不会多次执行。</p>
+
       
     </div><!-- .entry-content -->
 
@@ -139,23 +215,11 @@
 </ul>
 <h3 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h3><p>为了输出html代码，需要使用v-html指令<br><code>&lt;h2 v-html=&quot;url&quot;&gt;&lt;/h2&gt;</code><br><code>url:&lt;a href=&quot;http://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;</code><br>这里h2标签就会变成百度一下的连接，而不是显示纯文本。</p>
 <p>注：站点上动态渲染的任意 HTML 可能会非常危险，因为它很容易导致 XSS 攻击。请只对可信内容使用 HTML 插值，绝不要对用户提供的内容使用插值。</p>
-<h3 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a>v-pre</h3><p>直接将h2里面的内容原封不动显示出来</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-pre</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="v-cloak"><a href="#v-cloak" class="headerlink" title="v-cloak"></a>v-cloak</h3><p>这个指令保持在元素上直到关联实例结束编译。和 CSS 如 <code>[v-cloak] { display: none }</code> 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">v-cloak</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>结合上面的CSS，在Vue解析到这段代码之前，h2中有v-cloak，h2就会隐藏起来；在Vue解析之后，div中没有v-cloak，h2就会显示出来。</p>
-<h2 id="动态绑定属性"><a href="#动态绑定属性" class="headerlink" title="动态绑定属性"></a>动态绑定属性</h2><h3 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h3><p>动态的绑定一个或多个属性，或一个组件prop到表达式。<br><code>&lt;img v-bind:src=&quot;imgUrl&quot;&gt;</code><br>可以简写成：<br><code>&lt;img :src=&quot;imgUrl&quot;&gt;</code></p>
-<h4 id="v-bind动态绑定class（对象语法）"><a href="#v-bind动态绑定class（对象语法）" class="headerlink" title="v-bind动态绑定class（对象语法）"></a>v-bind动态绑定class（对象语法）</h4><p><code>&lt;div v-bind:class=&quot;{ active: isActive }&quot;&gt;&lt;/div&gt;</code><br>active为类名，isActive为布尔值，当isActive值为true时就会给div添加active这个class；可以在对象中传入多个字段来动态切换多个class，只需要改变其布尔值。</p>
-<p>绑定的数据对象不必内联定义在模板里：<br><code>&lt;div v-bind:class=&quot;classObject&quot;&gt;&lt;/div&gt;</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  classObject: &#123;</span><br><span class="line">    active: <span class="literal">true</span>,</span><br><span class="line">    line: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就会给div添加了active属性而没有添加line属性。</p>
-<h4 id="v-bind动态绑定class（数组语法）"><a href="#v-bind动态绑定class（数组语法）" class="headerlink" title="v-bind动态绑定class（数组语法）"></a>v-bind动态绑定class（数组语法）</h4><p><code>&lt;div v-bind:class=&quot;[active,line]&quot;&gt;&lt;/div&gt;</code></p>
-<h4 id="v-bind动态绑定style（对象语法）"><a href="#v-bind动态绑定style（对象语法）" class="headerlink" title="v-bind动态绑定style（对象语法）"></a>v-bind动态绑定style（对象语法）</h4><p>v-bind:style 的对象语法十分直观，看着非常像 CSS，但其实是一个 JavaScript 对象。<br>CSS属性名用驼峰式或者短横线分割（要加单引号括起来）。<br><code>&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  styleObject: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'13px'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="v-bind动态绑定style（数组语法）"><a href="#v-bind动态绑定style（数组语法）" class="headerlink" title="v-bind动态绑定style（数组语法）"></a>v-bind动态绑定style（数组语法）</h4><p><code>&lt;div v-bind:style=&quot;[baseStyles, overridingStyles]&quot;&gt;&lt;/div&gt;</code></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%BA%8C/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
       
     </div><!-- .entry-content -->
 
@@ -583,61 +647,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
 
 
   
-    <article id="title-HTTP笔记六（3）" class="title-HTTP笔记六（3） post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">HTTP笔记六（3）</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/" data-id="ck9ztf6xe000958q4a5o8fowk" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="请求首部字段"><a href="#请求首部字段" class="headerlink" title="请求首部字段"></a>请求首部字段</h3><ol>
-<li>Accept<br>作用：通知服务器，用户代理能够处理的媒体类型及媒体类型的相对优先级，使用type/subtype指定。<br>若想要给显示的媒体类型增加优先级，则使用 q= 来额外表示权重值 ，用分号进行分隔。权重值 q 的范围是 0~1（可精确到小数点后3位），且1为最大值。不指定权重 q 值时，默认权重为 q=1.0。</li>
-<li>Accept-Charset<br>作用：通知服务器用户代理支持的字符集及字符集的相对优先顺序，同样用 q 表示权重。</li>
-<li>Accept-Encoding<br>作用：告知服务器用户代理支持的内容编码及内容编码的优先级顺序，同样用 q 表示权重。</li>
-<li>Accept-Language<br>作用：告知服务器用户代理能够处理的自然语言集（指中文或英文等），以及相对优先级，同样用 q 表示权重。</li>
-<li>Authorization<br>作用：告知服务器，用户代理的认证信息（证书值）。</li>
-<li>Expect<br>作用：告知服务器期望出现的某种特定行为，若无法做出回应发生错误，返回状态码 417 Expectation Failed。</li>
-<li>From<br>作用：告知服务器使用用户代理的用户的电子邮件地址。</li>
-<li>Host<br>作用：告知服务器请求的资源所处的互联网主机名和端口号，必须包含在请求内，用来区分同一个IP上的不同主机。</li></ol>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/28/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%883%EF%BC%89/">
-    <time datetime="2020-04-28T11:09:07.000Z" class="entry-date">
-        2020-04-28
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -667,6 +676,10 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
       <ul>
         
           <li>
+            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E4%B8%89/">Vue笔记三</a>
           </li>
         
@@ -680,10 +693,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
         
           <li>
             <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/07/HTTP%E7%AC%94%E8%AE%B0%E5%8D%81/">HTTP笔记十</a>
           </li>
         
       </ul>
