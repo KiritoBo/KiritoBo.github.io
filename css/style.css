@@ -1090,14 +1090,14 @@ img.aligncenter,
 .entry-content table,
 .comment-content table {
 	border-bottom: 1px solid #ededed;
-	color: rgb(164, 164, 164);
+	color: black;
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2;
 	margin: 0 0 24px;
 	margin: 0 0 1.714285714rem;
 	width: 100%;
-	background-color: #2A3137;
+	background-color: transparent;
 }
 .entry-content table caption,
 .comment-content table caption {
