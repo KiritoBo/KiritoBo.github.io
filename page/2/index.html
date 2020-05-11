@@ -69,6 +69,124 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记七" class="title-HTTP笔记七 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/" data-id="ck9ztf6xa000458q4531499cl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="确保Web安全的HTTPS"><a href="#确保Web安全的HTTPS" class="headerlink" title="确保Web安全的HTTPS"></a>确保Web安全的HTTPS</h3><h4 id="HTTP缺点"><a href="#HTTP缺点" class="headerlink" title="HTTP缺点"></a>HTTP缺点</h4><ol>
+<li>通信使用明文可能被窃听<br>HTTP本身没有加密功能，，按 TCP/IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。<br>通过抓包或嗅探器工具就能收集互联网上流动的数据包了，常用的加密对象有如下几个：<br>通信的加密：通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输协议）的组合使用，加密 HTTP 的通信内容。（SSL与HTTP组合使用称为HTTPS或HTTP over SSL）<br>内容的加密：把 HTTP 报文里所含的内容进行加密处理。 （前提是客户端和服务器同时具备加密和解密机制）</li>
+<li>不验证通信方的身份就可能遭遇伪装<br>HTTP 协议中的请求和响应不会对通信方进行确认。<br>任何人都可以发起请求，服务器接收请求也会返回响应，会存在以下隐患：</li>
+</ol>
+<ul>
+<li>无法确定请求发送至目标的 Web 服务器是否是按真实意图返回响应的那台服务器。有可能是已伪装的 Web 服务器。</li>
+<li>无法确定响应返回到的客户端是否是按真实意图接收响应的那个客户端。有可能是已伪装的客户端。</li>
+<li>无法确定正在通信的对方是否具备访问权限。</li>
+<li>无法判定请求是来自何方、出自谁手。</li>
+<li>即使是无意义的请求也会接收。无法阻止海量请求下的 DoS 攻击（Denial of Service，拒绝服务攻击）。<br>使用SSL的证书可以用于确定对方，证书由第三方机构颁发，只要双方都有证书就可以互相确认。</li>
+</ul>
+<ol start="3">
+<li>无法证明报文完整性，可能已遭篡改<br>由于HTTP协议无法证明通信报文的完整性，即使内容被篡改也无法知道。<br>虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法，以及用来确认文件的数字签名方法。</li>
+</ol>
+<hr>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">
+    <time datetime="2020-04-30T11:59:05.000Z" class="entry-date">
+        2020-04-30
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="title-HTTP笔记六（4）" class="title-HTTP笔记六（4） post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/" data-id="ck9ztf6xs000i58q4figh0nag" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="响应首部字段"><a href="#响应首部字段" class="headerlink" title="响应首部字段"></a>响应首部字段</h3><p>响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。</p>
+<ol>
+<li>Accept-Ranges<br>作用：来告知客户端服务器是否能处理范围请求，以指定获取服务器端某个部分的资源。（可处理为bytes，反之none）</li>
+<li>Age<br>作用：告知客户端，源服务器在多久前创建了响应。字段值的单位为秒。</li>
+<li>ETag<br>作用：告知客户端实体标识。它是一种可将资源以字符串形式做唯一性标识的方式。服务器会为每份资源分配对应的 ETag 值。<br>ETag有强弱值之分，强ETag不论实体发生什么变化都会改变；弱ETag值用于提示资源是否相同，资源发生根本改变才变，且在字段值之前加W/。</li>
+<li>Location<br>作用：将响应接收方引导至某个与请求 URI 位置不同的资源。</li>
+<li>Proxy-Authenticate<br>作用：把由代理服务器所要求的认证信息发送给客户端。</li>
+<li>Retry-After<br>作用： 告知客户端应该在多久之后再次发送请求。主要配合状态码 503 Service Unavailable 响应，或 3xx Redirect 响应一起使用。</li>
+<li>Server<br>作用：告知客户端当前服务器上安装的 HTTP 服务器应用程序的信息。</li>
+<li>Vary<br>作用：对缓存进行控制。从代理服务器接收到源服务器返回包含 Vary 指定项的响应之后，若再要进行缓存，仅对请求中含有相同 Vary 指定首部字段的请求返回缓存。即使对相同资源发起请求，但由于 Vary 指定的首部字段不相同，因此必须要从源服务器重新获取资源。</li>
+<li>WWW-Authenticate<br>作用：告知客户端适用于访问请求 URI 所指定资源的认证方案（Basic 或是 Digest）和带参数提示的质询（challenge）。状态码 401 Unauthorized 响应中，肯定带有首部字段 WWW-Authenticate。</li></ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">
+    <time datetime="2020-04-29T11:18:31.000Z" class="entry-date">
+        2020-04-29
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记六（3）" class="title-HTTP笔记六（3） post type-post status-publish format-standard hentry">
     <!---->
 
@@ -557,113 +675,6 @@
 
 
   
-    <article id="title-sao-LOGIN-界面" class="title-sao-LOGIN-界面 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/">sao LOGIN 界面</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/" data-id="ck9ztf6xt000j58q4gl0t8pa8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h4 id="还原SAO动画中的登录界面"><a href="#还原SAO动画中的登录界面" class="headerlink" title="还原SAO动画中的登录界面"></a>还原SAO动画中的登录界面</h4><p>前面的博客做了个相关的主题界面效果图如下：</p>
-<img src="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/saologin1.0.png" class title="saologin1.0">
-<p>这次做了个原动画中的登录界面效果图如下：</p>
-<img src="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/saologin.jpg" class title="saologin2.0">
-
-<p>自己在做的时候主要遇到的问题有以下几点：</p>
-<ol>
-<li>为了还原动画里的登录界面需要隐藏登录按钮还能实现登录的功能，我这里使用的方法是使用正常的登录按钮然后样式中加入<code>left：9999</code>并溢出隐藏，JS中构造一个函数通过判断回车键是否被按下来代替鼠标点击登录按钮。</li>
-<li>确认用户名和密码是构造一个函数来获取用户名和密码并判断是否正确。</li>
-<li>登录框的主体主要用的是form和input，在用户名和密码输入正确并登录之后通过form的action属性来跳转到下一个页面。<br>代码如下：</li></ol>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/19/sao-LOGIN-%E7%95%8C%E9%9D%A2/">
-    <time datetime="2020-04-19T12:36:34.000Z" class="entry-date">
-        2020-04-19
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="title-伪类选择器" class="title-伪类选择器 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">伪类选择器</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/" data-id="ck9ztf6xt000k58q4bxlu4vdv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <p>:link       访问前的样式（只能给a添加）<br>:visited    访问后的样式（只能给a添加）<br>:hover      鼠标滑入的样式<br>:active     鼠标点击的样式</p>
-<hr>
-<p>最近在写网页和分析其他网页的过程中发现:hover是最常用的，:link和visited偶尔出现。</p>
-<hr>
-<p>:after :before    通过伪类方式给元素添加一段文本内容，使用content属性<br>:checked :disabled :focus     针对表单元素</p>
-<hr>
-<p>结构性伪类选择器<br>  :nth-of-type()  :nth-child()<br>  括号里从1开始，直接写n表示从0到无穷也就是全选。<br>  first-of-type() 选择第一项<br>  last-of-type()  选择最后一项<br>  only-of-type()  只有一项时使用</p>
-<hr>
-<p>  nth-of-type()和nth-child()的区别<br>  nth-of-type(n)是选择同一个父元素中相同子元素的第n个<br>  nth-child(n)是选择同一个父元素中所有子元素中的第n个<br>  eg:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure><br>  ul:nth-of-type(2)选择的是第二个li<br>  ul:nth-child(2)选择的是div<br>  注：这里若使用only-of-type选择div是可以的，因为只有一个div标签。</p>
-
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/14/%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/">
-    <time datetime="2020-04-14T14:15:20.000Z" class="entry-date">
-        2020-04-14
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -693,6 +704,14 @@
       <ul>
         
           <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">Vue笔记六</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/">Vue笔记五</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
           </li>
         
@@ -702,14 +721,6 @@
         
           <li>
             <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%BA%8C/">Vue笔记二</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">Vue笔记一</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
           </li>
         
       </ul>

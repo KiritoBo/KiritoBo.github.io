@@ -69,6 +69,115 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-Vue笔记六" class="title-Vue笔记六 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">Vue笔记六</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/" data-id="cka2kaeor00018gq48nkma1lw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="组件化开发"><a href="#组件化开发" class="headerlink" title="组件化开发"></a>组件化开发</h3><p>组件化思想：将一个页面分成多个组件；每个组件都用于实现页面的功能块；每一个组件又可以进行细分。</p>
+<h4 id="注册组件的基本步骤"><a href="#注册组件的基本步骤" class="headerlink" title="注册组件的基本步骤"></a>注册组件的基本步骤</h4><ol>
+<li>调用Vue.extend()方法<strong>创建组件构造器</strong></li>
+<li>调用Vue.component()方法<strong>注册组件</strong></li>
+<li>在Vue实例的作用范围内<strong>使用组件</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 3.使用组件 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">my-cpn</span>&gt;</span><span class="tag">&lt;/<span class="name">my-cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">//1.创建组件构造器对象</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> cpnC = Vue.extend(&#123;</span></span><br><span class="line">    template: `</span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="actionscript">  <span class="comment">//2.注册组件</span></span></span><br><span class="line"><span class="javascript">  Vue.component(<span class="string">`my-cpn`</span>,cpnC)   <span class="comment">//全局组件</span></span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    components:&#123;</span><br><span class="line"><span class="actionscript">      <span class="string">'cpn'</span>: cpnC                  <span class="comment">//局部组件(挂载在某个实例中)</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="全局组件注册的语法糖"><a href="#全局组件注册的语法糖" class="headerlink" title="全局组件注册的语法糖"></a>全局组件注册的语法糖</h4>将全局组件cpnC换成extend里的内容：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(`my-cpn`,&#123;</span><br><span class="line">  template: `</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="局部组件注册语法糖"><a href="#局部组件注册语法糖" class="headerlink" title="局部组件注册语法糖"></a>局部组件注册语法糖</h4>将局部组件中的cpnC替换成extend里的内容，同上。</li></ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">
+    <time datetime="2020-05-11T11:38:50.000Z" class="entry-date">
+        2020-05-11
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="title-Vue笔记五" class="title-Vue笔记五 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/">Vue笔记五</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/" data-id="cka2kaeoo00008gq4g2ne7c4z" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="v-model（与表单控件双向绑定）"><a href="#v-model（与表单控件双向绑定）" class="headerlink" title="v-model（与表单控件双向绑定）"></a>v-model（与表单控件双向绑定）</h3><p>用法：在表单控件或者组件上创建双向绑定。v-model 指令在表单 input、textarea 及 select 元素上创建双向数据绑定。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"message"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当message的值变化时，input的内容随之变化；当input的内容变化时，message的值也随之变化。</p>
+<h4 id="v-model本质"><a href="#v-model本质" class="headerlink" title="v-model本质"></a>v-model本质</h4><p>v-model本质上不过是语法糖，它与下面的代码功能一样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">:value</span>=<span class="string">"message"</span> @<span class="attr">input</span>=<span class="string">"message = $event.traget.value"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>本质上就是包含两个操作：</p>
+<ol>
+<li>用v-bind绑定一个value属性</li>
+<li>v-on指令给当前元素绑定input事件</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/">
+    <time datetime="2020-05-11T10:50:36.000Z" class="entry-date">
+        2020-05-11
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-Vue笔记四" class="title-Vue笔记四 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -529,124 +638,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
 
 
   
-    <article id="title-HTTP笔记七" class="title-HTTP笔记七 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">HTTP笔记七</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/" data-id="ck9ztf6xa000458q4531499cl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="确保Web安全的HTTPS"><a href="#确保Web安全的HTTPS" class="headerlink" title="确保Web安全的HTTPS"></a>确保Web安全的HTTPS</h3><h4 id="HTTP缺点"><a href="#HTTP缺点" class="headerlink" title="HTTP缺点"></a>HTTP缺点</h4><ol>
-<li>通信使用明文可能被窃听<br>HTTP本身没有加密功能，，按 TCP/IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。<br>通过抓包或嗅探器工具就能收集互联网上流动的数据包了，常用的加密对象有如下几个：<br>通信的加密：通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输协议）的组合使用，加密 HTTP 的通信内容。（SSL与HTTP组合使用称为HTTPS或HTTP over SSL）<br>内容的加密：把 HTTP 报文里所含的内容进行加密处理。 （前提是客户端和服务器同时具备加密和解密机制）</li>
-<li>不验证通信方的身份就可能遭遇伪装<br>HTTP 协议中的请求和响应不会对通信方进行确认。<br>任何人都可以发起请求，服务器接收请求也会返回响应，会存在以下隐患：</li>
-</ol>
-<ul>
-<li>无法确定请求发送至目标的 Web 服务器是否是按真实意图返回响应的那台服务器。有可能是已伪装的 Web 服务器。</li>
-<li>无法确定响应返回到的客户端是否是按真实意图接收响应的那个客户端。有可能是已伪装的客户端。</li>
-<li>无法确定正在通信的对方是否具备访问权限。</li>
-<li>无法判定请求是来自何方、出自谁手。</li>
-<li>即使是无意义的请求也会接收。无法阻止海量请求下的 DoS 攻击（Denial of Service，拒绝服务攻击）。<br>使用SSL的证书可以用于确定对方，证书由第三方机构颁发，只要双方都有证书就可以互相确认。</li>
-</ul>
-<ol start="3">
-<li>无法证明报文完整性，可能已遭篡改<br>由于HTTP协议无法证明通信报文的完整性，即使内容被篡改也无法知道。<br>虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法，以及用来确认文件的数字签名方法。</li>
-</ol>
-<hr>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/30/HTTP%E7%AC%94%E8%AE%B0%E4%B8%83/">
-    <time datetime="2020-04-30T11:59:05.000Z" class="entry-date">
-        2020-04-30
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
-    <article id="title-HTTP笔记六（4）" class="title-HTTP笔记六（4） post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">HTTP笔记六（4）</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/" data-id="ck9ztf6xs000i58q4figh0nag" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="响应首部字段"><a href="#响应首部字段" class="headerlink" title="响应首部字段"></a>响应首部字段</h3><p>响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。</p>
-<ol>
-<li>Accept-Ranges<br>作用：来告知客户端服务器是否能处理范围请求，以指定获取服务器端某个部分的资源。（可处理为bytes，反之none）</li>
-<li>Age<br>作用：告知客户端，源服务器在多久前创建了响应。字段值的单位为秒。</li>
-<li>ETag<br>作用：告知客户端实体标识。它是一种可将资源以字符串形式做唯一性标识的方式。服务器会为每份资源分配对应的 ETag 值。<br>ETag有强弱值之分，强ETag不论实体发生什么变化都会改变；弱ETag值用于提示资源是否相同，资源发生根本改变才变，且在字段值之前加W/。</li>
-<li>Location<br>作用：将响应接收方引导至某个与请求 URI 位置不同的资源。</li>
-<li>Proxy-Authenticate<br>作用：把由代理服务器所要求的认证信息发送给客户端。</li>
-<li>Retry-After<br>作用： 告知客户端应该在多久之后再次发送请求。主要配合状态码 503 Service Unavailable 响应，或 3xx Redirect 响应一起使用。</li>
-<li>Server<br>作用：告知客户端当前服务器上安装的 HTTP 服务器应用程序的信息。</li>
-<li>Vary<br>作用：对缓存进行控制。从代理服务器接收到源服务器返回包含 Vary 指定项的响应之后，若再要进行缓存，仅对请求中含有相同 Vary 指定首部字段的请求返回缓存。即使对相同资源发起请求，但由于 Vary 指定的首部字段不相同，因此必须要从源服务器重新获取资源。</li>
-<li>WWW-Authenticate<br>作用：告知客户端适用于访问请求 URI 所指定资源的认证方案（Basic 或是 Digest）和带参数提示的质询（challenge）。状态码 401 Unauthorized 响应中，肯定带有首部字段 WWW-Authenticate。</li></ol>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/29/HTTP%E7%AC%94%E8%AE%B0%E5%85%AD%EF%BC%884%EF%BC%89/">
-    <time datetime="2020-04-29T11:18:31.000Z" class="entry-date">
-        2020-04-29
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -676,6 +667,14 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
       <ul>
         
           <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">Vue笔记六</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/">Vue笔记五</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
           </li>
         
@@ -685,14 +684,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
         
           <li>
             <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%BA%8C/">Vue笔记二</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%B8%80/">Vue笔记一</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/08/AJAX%E7%AC%94%E8%AE%B0/">AJAX笔记</a>
           </li>
         
       </ul>

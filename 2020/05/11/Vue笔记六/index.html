@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Vue笔记六 | KiritoBo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="组件化开发组件化思想：将一个页面分成多个组件；每个组件都用于实现页面的功能块；每一个组件又可以进行细分。 注册组件的基本步骤 调用Vue.extend()方法创建组件构造器 调用Vue.component()方法注册组件 在Vue实例的作用范围内使用组件1234567891011121314151617181920212223&lt;div id &#x3D; &quot;app&quot;&gt;  &lt;!-- 3.使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue笔记六">
+<meta property="og:url" content="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/index.html">
+<meta property="og:site_name" content="KiritoBo">
+<meta property="og:description" content="组件化开发组件化思想：将一个页面分成多个组件；每个组件都用于实现页面的功能块；每一个组件又可以进行细分。 注册组件的基本步骤 调用Vue.extend()方法创建组件构造器 调用Vue.component()方法注册组件 在Vue实例的作用范围内使用组件1234567891011121314151617181920212223&lt;div id &#x3D; &quot;app&quot;&gt;  &lt;!-- 3.使用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-11T11:38:50.000Z">
+<meta property="article:modified_time" content="2020-05-11T13:56:40.448Z">
+<meta property="article:author" content="KiritoBo">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="KiritoBo" rel="home">KiritoBo</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">HTML/CSS　　|　　JS　　|　　769251633@qq.com　　|　　 未来的旅程是如此遥远，能见到的光明却是如此稀少。即使如此——我仍然没有完全放弃希望。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="title-Vue笔记六" class="title-Vue笔记六 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Vue笔记六
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/" data-id="cka2kaeor00018gq48nkma1lw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="组件化开发"><a href="#组件化开发" class="headerlink" title="组件化开发"></a>组件化开发</h3><p>组件化思想：将一个页面分成多个组件；每个组件都用于实现页面的功能块；每一个组件又可以进行细分。</p>
+<h4 id="注册组件的基本步骤"><a href="#注册组件的基本步骤" class="headerlink" title="注册组件的基本步骤"></a>注册组件的基本步骤</h4><ol>
+<li>调用Vue.extend()方法<strong>创建组件构造器</strong></li>
+<li>调用Vue.component()方法<strong>注册组件</strong></li>
+<li>在Vue实例的作用范围内<strong>使用组件</strong><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 3.使用组件 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">my-cpn</span>&gt;</span><span class="tag">&lt;/<span class="name">my-cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">//1.创建组件构造器对象</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> cpnC = Vue.extend(&#123;</span></span><br><span class="line">    template: `</span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="actionscript">  <span class="comment">//2.注册组件</span></span></span><br><span class="line"><span class="javascript">  Vue.component(<span class="string">`my-cpn`</span>,cpnC)   <span class="comment">//全局组件</span></span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line">    components:&#123;</span><br><span class="line"><span class="actionscript">      <span class="string">'cpn'</span>: cpnC                  <span class="comment">//局部组件(挂载在某个实例中)</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="全局组件注册的语法糖"><a href="#全局组件注册的语法糖" class="headerlink" title="全局组件注册的语法糖"></a>全局组件注册的语法糖</h4>将全局组件cpnC换成extend里的内容：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(`my-cpn`,&#123;</span><br><span class="line">  template: `</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>222<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="局部组件注册语法糖"><a href="#局部组件注册语法糖" class="headerlink" title="局部组件注册语法糖"></a>局部组件注册语法糖</h4>将局部组件中的cpnC替换成extend里的内容，同上。<a id="more"></a>
+<h4 id="组件模板抽离的写法"><a href="#组件模板抽离的写法" class="headerlink" title="组件模板抽离的写法"></a>组件模板抽离的写法</h4></li>
+<li>script标签，注意类型必须是text/x-template<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-template"</span> <span class="attr">id</span>=<span class="string">"cpn"</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  Vue.component(<span class="string">'cpn'</span>,&#123;</span></span><br><span class="line"><span class="actionscript">    template: <span class="string">'#cpn'</span></span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>template标签<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">"cpn"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>111<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  Vue.component(<span class="string">'cpn'</span>,&#123;</span></span><br><span class="line"><span class="actionscript">    template: <span class="string">'#cpn'</span></span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="组件数据的存放"><a href="#组件数据的存放" class="headerlink" title="组件数据的存放"></a>组件数据的存放</h4><p>组件对象也有自己的data属性，且data属性必须是一个函数，而且这个函数返回一个对象，对象内部保存这数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    count: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果data不是函数，多次使用一个组件他们之间就会互相影响。</p>
+<h4 id="父子组件通信"><a href="#父子组件通信" class="headerlink" title="父子组件通信"></a>父子组件通信</h4><ol>
+<li><p>父组件向子组件传递数据（通过props向子组件传递数据）</p>
+<ul>
+<li>props可以以字符串数组形式列出prop：<br><code>props: [&#39;title&#39;, &#39;likes&#39;, &#39;isPublished&#39;, &#39;commentIds&#39;, &#39;author&#39;]</code></li>
+<li>props可以以对象形式列出prop，这些属性的名称和值分别是prop各自的名称和类型：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;</span><br><span class="line">title: <span class="built_in">String</span>,</span><br><span class="line">likes: <span class="built_in">Number</span>,</span><br><span class="line">isPublished: <span class="built_in">Boolean</span>,</span><br><span class="line">commentIds: <span class="built_in">Array</span>,</span><br><span class="line">author: <span class="built_in">Object</span>,</span><br><span class="line">callback: <span class="built_in">Function</span>,</span><br><span class="line">contactsPromise: <span class="built_in">Promise</span> <span class="comment">// or any other constructor</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>prop 通过v-bind动态赋值<br><code>&lt;cpn v-bind:title=&quot;post.title&quot;&gt;&lt;/cpn&gt;</code></li>
+<li>prop验证<br>为了定制 prop 的验证方式，你可以为 props 中的值提供一个带有验证需求的对象，而不是一个字符串数组。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</span><br><span class="line">props: &#123;</span><br><span class="line">  <span class="comment">// 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)</span></span><br><span class="line">  propA: <span class="built_in">Number</span>,</span><br><span class="line">  <span class="comment">// 多个可能的类型</span></span><br><span class="line">  propB: [<span class="built_in">String</span>, <span class="built_in">Number</span>],</span><br><span class="line">  <span class="comment">// 必填的字符串</span></span><br><span class="line">  propC: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 带有默认值的数字</span></span><br><span class="line">  propD: &#123;</span><br><span class="line">    type: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="keyword">default</span>: <span class="number">100</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 带有默认值的对象</span></span><br><span class="line">  propE: &#123;</span><br><span class="line">    type: <span class="built_in">Object</span>,</span><br><span class="line">    <span class="comment">// 对象或数组默认值必须从一个工厂函数获取</span></span><br><span class="line">    <span class="keyword">default</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">message</span>: <span class="string">'hello'</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 自定义验证函数</span></span><br><span class="line">  propF: &#123;</span><br><span class="line">    validator: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 这个值必须匹配下列字符串中的一个</span></span><br><span class="line">      <span class="keyword">return</span> [<span class="string">'success'</span>, <span class="string">'warning'</span>, <span class="string">'danger'</span>].indexOf(value) !== <span class="number">-1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>HTML 中的属性名是大小写不敏感的，所以浏览器会把所有大写字符解释为小写字符。这意味着当你使用 DOM 中的模板时，驼峰命名法的 prop 名需要使用其等价的 kebab-case (短横线分隔命名) 命名。</li>
+</ul>
+</li>
+<li><p>通过自定义事件($emit Events)向父组件发送消息<br>子组件通过<code>this.$emit(&#39;my-event&#39;)</code>发送事件；父组件通过v-on监听事件。（事件名使用kebab-case命名，不用驼峰）</p>
+</li>
+</ol>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">
+    <time datetime="2020-05-11T11:38:50.000Z" class="entry-date">
+        2020-05-11
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/" rel="next">Vue笔记五 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">Vue笔记六</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E4%BA%94/">Vue笔记五</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E4%B8%89/">Vue笔记三</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%BA%8C/">Vue笔记二</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 KiritoBo
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
