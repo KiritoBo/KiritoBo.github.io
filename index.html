@@ -69,6 +69,58 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-Vue笔记七" class="title-Vue笔记七 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/">Vue笔记七</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/" data-id="cka3zx7rr00007kq4c24lfiz1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h3><p>组建的插槽是为了使封装的组件更具有扩展性，让使用者决定组件内部一些内容展示什么。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cpn</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">"cpn"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在<code>&lt;cpn&gt;&lt;/cpn&gt;</code>标签内的内容就会替换<code>&lt;solt&gt;&lt;/slot&gt;</code><br>如果在<code>&lt;solt&gt;&lt;/slot&gt;</code>内添加了内容，<code>&lt;cpn&gt;&lt;/cpn&gt;</code>中默认就会显示其中的内容<br>如果<code>&lt;cpn&gt;&lt;/cpn&gt;</code>内有多个内容，一起替换<code>&lt;solt&gt;&lt;/slot&gt;</code></p>
+<h4 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h4><p>在有多个插槽而我们又只想更改某个特定插槽时，给插槽添加name属性就可以使其成为具名插槽。<br><code>&lt;cpn&gt;&lt;span slot=&quot;center&quot;&gt;111&lt;/span&gt;&lt;/cpn&gt;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>222<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"center"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>222<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>222<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样就会只把第二行slot内容改为111</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/">
+    <time datetime="2020-05-12T11:51:14.000Z" class="entry-date">
+        2020-05-12
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-Vue笔记六" class="title-Vue笔记六 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -578,66 +630,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
 
 
   
-    <article id="title-HTTP笔记八" class="title-HTTP笔记八 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">HTTP笔记八</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/" data-id="ck9ztf6xb000658q45vrj1dme" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="确认访问用户身份的认证"><a href="#确认访问用户身份的认证" class="headerlink" title="确认访问用户身份的认证"></a>确认访问用户身份的认证</h3><p>认证是为了弄清谁在访问服务器，需要核对客户端的信息，通常指以下这些：</p>
-<ul>
-<li>密码：只有本人才会知道的字符串信息。</li>
-<li>动态令牌：仅限本人持有的设备内显示的一次性密码。</li>
-<li>数字证书：仅限本人（终端）持有的信息。</li>
-<li>生物认证：指纹和虹膜等本人的生理信息。</li>
-<li>IC卡等：仅限本人持有的信息。</li>
-</ul>
-<h3 id="HTTP认证方式"><a href="#HTTP认证方式" class="headerlink" title="HTTP认证方式"></a>HTTP认证方式</h3><ul>
-<li>BASIC认证（基本认证）</li>
-<li>DIGEST认证（摘要认证）</li>
-<li>SSL客户端认证</li>
-<li>FormBase认证（基于表单认证）</li>
-<li>Windows统一认证（Keberos认证，NTLM认证）</li></ul>
-        
-          <p class="article-more-link">
-            <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/05/01/HTTP%E7%AC%94%E8%AE%B0%E5%85%AB/">
-    <time datetime="2020-05-01T15:09:47.000Z" class="entry-date">
-        2020-05-01
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -667,6 +659,10 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
       <ul>
         
           <li>
+            <a href="/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/">Vue笔记七</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/11/Vue%E7%AC%94%E8%AE%B0%E5%85%AD/">Vue笔记六</a>
           </li>
         
@@ -680,10 +676,6 @@ Vue的声明式渲染：数据和DOM建立了关联，数据发生改变，界�
         
           <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E4%B8%89/">Vue笔记三</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/09/Vue%E7%AC%94%E8%AE%B0%E4%BA%8C/">Vue笔记二</a>
           </li>
         
       </ul>
