@@ -69,6 +69,61 @@
       <div id="main" class="wrapper">
         <div id="primary" class="site-content"><div id="content" role="main">
   
+    <article id="title-HTTP笔记九" class="title-HTTP笔记九 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2020/05/06/HTTP%E7%AC%94%E8%AE%B0%E4%B9%9D/">HTTP笔记九</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/05/06/HTTP%E7%AC%94%E8%AE%B0%E4%B9%9D/" data-id="ck9ztf6x8000258q45n48fgu7" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="基于HTTP的功能追加"><a href="#基于HTTP的功能追加" class="headerlink" title="基于HTTP的功能追加"></a>基于HTTP的功能追加</h3><h4 id="HTTP的瓶颈"><a href="#HTTP的瓶颈" class="headerlink" title="HTTP的瓶颈"></a>HTTP的瓶颈</h4><ul>
+<li>一条连接上只可发送一个请求。</li>
+<li>请求只能从客户端开始，客户端不可以接收除响应以外的指令。</li>
+<li>请求/响应首部未经压缩就发送，首部信息越多延迟越大。</li>
+<li>发送冗长的首部，每次互相发送相同的首部造成的浪费较多。</li>
+<li>可以任意选择数据压缩格式，非强制压缩发送。</li>
+</ul>
+<h4 id="Ajax解决办法"><a href="#Ajax解决办法" class="headerlink" title="Ajax解决办法"></a>Ajax解决办法</h4><p>Ajax（异步 JavaScript 与 XML 技术）是一种有效利用 JavaScript 和 DOM 的操作，以达到局部 Web 页面替换加载的异步通信手段。和以前的同步通信相比，由于它只更新一部分页面，响应中传输的数据量会因此而减少。<br>Ajax 的核心技术是名为 XMLHttpRequest 的 API，通过 JavaScript 脚本语言的调用就能和服务器进行 HTTP 通信，进而只更新局部页面。<br>利用 Ajax 实时地从服务器获取内容，有可能会导致大量请求产生。另外，Ajax 仍未解决 HTTP 协议本身存在的问题。</p>
+<h4 id="Comet-的解决方法"><a href="#Comet-的解决方法" class="headerlink" title="Comet 的解决方法"></a>Comet 的解决方法</h4><p>Comet 会先将响应置于挂起状态，在服务器端更新时不会让请求等待，直接给客户端返回响应，通过延迟应答模拟实现服务器端向客户端推送的功能。<br>内容上虽然可以做到实时更新，但为了保留响应，一次连接的持续时间也变长了。期间，为了维持连接会消耗更多的资源。另外，Comet 也仍未解决 HTTP 协议本身存在的问题。</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/06/HTTP%E7%AC%94%E8%AE%B0%E4%B9%9D/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2020/05/06/HTTP%E7%AC%94%E8%AE%B0%E4%B9%9D/">
+    <time datetime="2020-05-06T10:37:24.000Z" class="entry-date">
+        2020-05-06
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="title-HTTP笔记八" class="title-HTTP笔记八 post type-post status-publish format-standard hentry">
     <!---->
 
@@ -625,56 +680,6 @@
 
 
   
-    <article id="title-HTTP笔记第二章" class="title-HTTP笔记第二章 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/">HTTP笔记第二章</a>
-    </h1>
-  
-
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="https://github.com/KiritoBo/KiritoBo.github.io/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/" data-id="ck9ztf6xm000b58q48lyo2kbg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      
-        <h3 id="简单的HTTP协议"><a href="#简单的HTTP协议" class="headerlink" title="简单的HTTP协议"></a>简单的HTTP协议</h3><h4 id="HTTP协议用于客户端和服务器之间的通信"><a href="#HTTP协议用于客户端和服务器之间的通信" class="headerlink" title="HTTP协议用于客户端和服务器之间的通信"></a>HTTP协议用于客户端和服务器之间的通信</h4><p>请求访问文本或图像等资源的一端称为客户端，而提供资源响应的一端称为服务器端。<br>两台计算机之间使用HTTP协议通信时必有一端是客户端，一端是服务器端，HTTP协议能够明确区分每端的角色。</p>
-<h4 id="通过请求和响应的交换达成通信"><a href="#通过请求和响应的交换达成通信" class="headerlink" title="通过请求和响应的交换达成通信"></a>通过请求和响应的交换达成通信</h4><p>HTTP协议规定，客户端发出请求，服务器端响应请求并返回。（先从客户端开始建立通信，服务器没收到请求之前不会发送响应）</p>
-<h4 id="请求报文的构成"><a href="#请求报文的构成" class="headerlink" title="请求报文的构成"></a>请求报文的构成</h4><p>请求报文是由请求方法、请求 URI、协议版本、可选的请求首部字段和内容实体构成的。<br>eg：<img src="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/eg1.jpg" class></p>
-<h4 id="响应报文的构成"><a href="#响应报文的构成" class="headerlink" title="响应报文的构成"></a>响应报文的构成</h4><p>响应报文基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成。<br>eg：<img src="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/eg2.jpg" class></p>
-        
-          <p class="article-more-link">
-            <a href="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/#more" class="more-link">More <span class="meta-nav">→</span></a>
-          </p>
-        
-      
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2020/04/21/HTTP%E7%AC%94%E8%AE%B0%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
-    <time datetime="2020-04-21T11:19:16.000Z" class="entry-date">
-        2020-04-21
-    </time>
-</a>
-    
-    
-    </footer>
-</article>
-
-
-
-
-
-
-  
   
     <nav id="pagination">
       <nav id="page-nav">
@@ -704,6 +709,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/13/webpack%E7%AC%94%E8%AE%B0/">webpack笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/12/Vue%E7%AC%94%E8%AE%B0%E4%B8%83/">Vue笔记七</a>
           </li>
         
@@ -717,10 +726,6 @@
         
           <li>
             <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E5%9B%9B/">Vue笔记四</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/10/Vue%E7%AC%94%E8%AE%B0%E4%B8%89/">Vue笔记三</a>
           </li>
         
       </ul>
